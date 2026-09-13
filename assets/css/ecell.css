@@ -1,0 +1,210 @@
+/* ================= E-CELL SPECIFIC STYLES ================= */
+
+/* ================= MAIN CONTAINER ================= */
+.ecell-container {
+    display: flex;
+    gap: 20px;
+    padding: 30px 10%;
+    /* Matched side padding with tbi-section */
+    min-height: 550px;
+    background: #ffffff;
+}
+
+/* ================= LEFT SECTION ================= */
+.left-section {
+    flex: 1;
+    background: linear-gradient(120deg, #f1f5f9, #eef4fb, #f1f5f9);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.left-section .upper,
+.left-section .lower {
+    flex: 1;
+    padding: 25px;
+    animation: fadeInUp 1s forwards;
+    opacity: 0;
+}
+
+.left-section .lower {
+    animation-delay: 0.4s;
+}
+
+.left-section h1 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    /* Matched font */
+}
+
+.left-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 520px;
+    color: #334155;
+    font-family: 'Poppins', sans-serif;
+    /* Matched font */
+}
+
+.left-section .upper:hover,
+.left-section .lower:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+/* ================= RIGHT SECTION ================= */
+.right-section {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s forwards;
+    opacity: 0;
+}
+
+.right-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.right-section:hover video {
+    transform: scale(1.05);
+}
+
+/* ================= CORE COMMITTEE ================= */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 per row */
+    gap: 24px;
+    padding: 40px 10%;
+}
+
+/* SHOW ONLY 8 MEMBERS */
+.masonry .card:nth-child(n+9) {
+    display: none;
+}
+
+/* CARD STYLE */
+.card {
+    height: 400px;
+    /* Adjusted height to fit better */
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* IMAGE FULL COVER */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= GROUP PHOTO ================= */
+.photo-container {
+    width: 80%;
+    height: 600px;
+    margin: 20px auto 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+    .ecell-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .right-section,
+    .left-section {
+        height: 420px;
+    }
+
+    .masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-container {
+        height: 420px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .left-section p {
+        font-size: 14px;
+    }
+
+    .masonry {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 360px;
+    }
+}

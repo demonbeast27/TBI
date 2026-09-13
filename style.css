@@ -1,0 +1,24 @@
+/*
+Theme Name: RBU TBI Theme
+Theme URI: https://rbutbi.ac.in
+Description: Custom WordPress theme for RBU Technology Business Incubator website
+Version: 1.0.0
+Author: TBI Development Team
+Author URI: https://rbutbi.ac.in
+Text Domain: tbi-theme
+Tags: education, business, incubator, startup
+*/
+
+/* This file is required by WordPress to recognize this as a theme */
+/* Main styles are enqueued from assets/css/ folder via functions.php */
+.entry-content {
+    margin-top: 0 !important;
+}
+
+.section-inner {
+    padding-top: 0 !important;
+}
+
+body {
+    margin: 0;
+}

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%" preserveAspectRatio="xMinYMid meet">
+  <defs>
+    <!-- Single 3D Isometric Cube -->
+    <g id="iso-cube">
+      <!-- Top Face (brightest light source from top) -->
+      <polygon points="0,-34.64 30,-17.32 0,0 -30,-17.32" fill="#FFFFFF" stroke="#E6E6E3" stroke-width="0.8" stroke-linejoin="round" />
+      <!-- Left Face (ambient light) -->
+      <polygon points="-30,-17.32 0,0 0,34.64 -30,17.32" fill="#EDEDEA" stroke="#E6E6E3" stroke-width="0.8" stroke-linejoin="round" />
+      <!-- Right Face (shadow side) -->
+      <polygon points="0,0 30,-17.32 30,17.32 0,34.64" fill="#DCDCD8" stroke="#E6E6E3" stroke-width="0.8" stroke-linejoin="round" />
+    </g>
+
+    <!-- Seamless Isometric Grid Pattern -->
+    <pattern id="cube-pattern" width="60" height="104" patternUnits="userSpaceOnUse">
+      <use href="#iso-cube" x="30" y="26" />
+      <use href="#iso-cube" x="0" y="78" />
+      <use href="#iso-cube" x="60" y="78" />
+      <use href="#iso-cube" x="0" y="-26" />
+      <use href="#iso-cube" x="60" y="-26" />
+      <use href="#iso-cube" x="30" y="130" />
+      <use href="#iso-cube" x="-30" y="26" />
+      <use href="#iso-cube" x="90" y="26" />
+      <use href="#iso-cube" x="-30" y="-26" />
+      <use href="#iso-cube" x="90" y="-26" />
+      <use href="#iso-cube" x="-30" y="130" />
+      <use href="#iso-cube" x="90" y="130" />
+    </pattern>
+
+    <!-- Clip path: Circular dome matching the reference image -->
+    <clipPath id="dome-clip">
+      <ellipse cx="220" cy="500" rx="460" ry="460" />
+    </clipPath>
+
+    <!-- Soft edge fade gradient mask -->
+    <linearGradient id="fade-mask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="88%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <mask id="soft-dome-mask">
+      <ellipse cx="220" cy="500" rx="460" ry="460" fill="url(#fade-mask)" />
+    </mask>
+  </defs>
+
+  <!-- Background subtle shadow circle for depth -->
+  <ellipse cx="220" cy="500" rx="462" ry="462" fill="#EAEAEA" opacity="0.45" />
+
+  <!-- The Isometric Cube Tessellation inside Dome with Soft Edge Mask -->
+  <rect x="-100" y="-50" width="850" height="1100" fill="url(#cube-pattern)" clip-path="url(#dome-clip)" mask="url(#soft-dome-mask)" />
+</svg>

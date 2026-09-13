@@ -1,0 +1,1092 @@
+<?php
+/**
+ * Template Name: Mentors
+ * Template Post Type: page
+ * @package TBI_Theme
+ */
+get_header();
+?>
+
+<!-- Editorial Page Header -->
+<div class="page-editorial-header">
+    <div class="peh-label">MENTORS</div>
+    <h1 class="peh-heading">
+        GUIDANCE FROM <span class="ph-red">INDUSTRY</span><br>
+        LEADERS &amp; <span class="ph-red">ENTREPRENEURS</span>
+    </h1>
+    <p class="peh-desc">
+        Learn from those who have built, scaled, and succeeded.<br>
+        <strong>Our mentors bring real-world experience to your entrepreneurial journey.</strong>
+    </p>
+</div>
+
+<!-- INTRO -->
+<div class="page-section" style="padding-top:80px; padding-bottom:60px;">
+    <div class="section-label">MENTORING PROGRAM</div>
+    <div class="split-layout">
+        <h2 class="page-heading">EXPERT MENTORING FOR STARTUPS</h2>
+        <div>
+            <p class="mono-text">Mentoring is crucial for startups as it provides guidance, industry insights, and a network of contacts that can help navigate challenges and accelerate growth. Mentors offer valuable experience and perspective, aiding in strategic decision-making and enhancing overall entrepreneurial success.</p>
+            <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(120deg,#eef2f7,#f8f9fc);
+color:#222;
+}
+
+/* Section */
+
+.mentor-section{
+padding:80px 6%;
+}
+
+/* Horizontal Scroll */
+
+.mentor-scroll{
+display:flex;
+gap:60px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:20px;
+}
+
+.mentor-scroll::-webkit-scrollbar{
+height:8px;
+}
+
+.mentor-scroll::-webkit-scrollbar-track{
+background:transparent;
+}
+
+.mentor-scroll::-webkit-scrollbar-thumb{
+background:#c7d2e3;
+border-radius:10px;
+}
+
+/* Mentor Card */
+
+.mentor-container{
+display:flex;
+align-items:center;
+gap:50px;
+min-width:850px;
+
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+
+padding:50px;
+border-radius:20px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.08),
+0 3px 8px rgba(0,0,0,0.04);
+
+transition:all 0.3s ease;
+}
+
+/* Hover Effect */
+
+.mentor-container:hover{
+transform:translateY(-8px);
+box-shadow:
+0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Image */
+
+.mentor-image{
+width:260px;
+height:260px;
+border-radius:50%;
+padding:10px;
+background:linear-gradient(135deg,#0a2c63,#3a6ed8);
+flex-shrink:0;
+}
+
+.mentor-image img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+}
+
+/* Mentor Text */
+
+.mentor-info{
+max-width:500px;
+}
+
+/* Name */
+
+.mentor-info h1{
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:8px;
+}
+
+/* Job */
+
+.mentor-info h3{
+font-size:18px;
+font-weight:500;
+color:#5c6b82;
+margin-bottom:20px;
+}
+
+/* Description */
+
+.mentor-info p{
+font-size:15px;
+line-height:1.7;
+color:#555;
+margin-bottom:25px;
+}
+
+/* Mentorship */
+
+.mentor-info h4{
+font-size:17px;
+font-weight:600;
+}
+
+.mentor-info span{
+color:#0a2c63;
+font-weight:700;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:900px){
+
+.mentor-container{
+flex-direction:column;
+text-align:center;
+min-width:350px;
+padding:35px;
+}
+
+.mentor-image{
+width:200px;
+height:200px;
+}
+
+.mentor-info{
+max-width:100%;
+}
+
+}
+</style>
+<section class="mentor-section">
+
+<div class="mentor-scroll">
+
+<!-- Mentor 1 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img decoding="async" width="507" height="433" src="http://rcoemtbi.org/wp-content/uploads/2024/12/1prabodh-ALpnKx3OoPu67W8k.jpg" class="attachment-large size-large wp-image-1692" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/1prabodh-ALpnKx3OoPu67W8k.jpg 507w, http://rcoemtbi.org/wp-content/uploads/2024/12/1prabodh-ALpnKx3OoPu67W8k-300x256.jpg 300w" sizes="(max-width: 507px) 100vw, 507px">
+</div>
+
+<div class="mentor-info">
+<h1>PRABODH HALDE</h1>
+<h3>Head Regulatory Affairs | Marico</h3>
+<p>
+Dr. Prabodh Halde leads Marico’s regulatory affairs division with over 30 years of expertise in food processing technology.
+</p>
+<h4>Area of Mentorship: <span>Technology</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 2 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="435" height="346" src="http://rcoemtbi.org/wp-content/uploads/2024/12/3vaibhav-m5KwB6qLrGSEqVro.jpg" class="attachment-large size-large wp-image-1728" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/3vaibhav-m5KwB6qLrGSEqVro.jpg 435w, http://rcoemtbi.org/wp-content/uploads/2024/12/3vaibhav-m5KwB6qLrGSEqVro-300x239.jpg 300w" sizes="(max-width: 435px) 100vw, 435px">
+</div>
+
+<div class="mentor-info">
+<h1>VAIBHAV GIRMIL</h1>
+<h3>Senior Manager | Punjab National Bank</h3>
+<p>
+Mr. Vaibhav Girmil is an accomplished Senior Manager at PNB with 12 years of expertise in treasury operations and foreign exchange.
+</p>
+<h4>Area of Mentorship: <span>Finance</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 3 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img decoding="async" width="446" height="416" src="http://rcoemtbi.org/wp-content/uploads/2024/12/2goutam-AR0yovxJZksEoz0b.jpg" class="attachment-large size-large wp-image-1712" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/2goutam-AR0yovxJZksEoz0b.jpg 446w, http://rcoemtbi.org/wp-content/uploads/2024/12/2goutam-AR0yovxJZksEoz0b-300x280.jpg 300w" sizes="(max-width: 446px) 100vw, 446px">
+</div>
+
+<div class="mentor-info">
+<h1>GOUTAM DUTTA</h1>
+<h3>Senior Advisory Solution Architect | IBM</h3>
+<p>
+Mr. Goutam Dutta leverages 24 years of industry experience providing cutting-edge solutions and strategic advisory.
+</p>
+<h4>Area of Mentorship: <span>Product Development</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 4 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="482" height="460" src="http://rcoemtbi.org/wp-content/uploads/2024/12/4deepak-AVLp26EaWksN29jz.jpg" class="attachment-large size-large wp-image-1739" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/4deepak-AVLp26EaWksN29jz.jpg 482w, http://rcoemtbi.org/wp-content/uploads/2024/12/4deepak-AVLp26EaWksN29jz-300x286.jpg 300w" sizes="(max-width: 482px) 100vw, 482px">
+
+</div>
+
+<div class="mentor-info">
+<h1>DEEPAK JHA</h1>
+<h3>Product Manager | Lightbeam AI</h3>
+<p>
+A seasoned Product Manager with experience in AI, Security, Privacy, Healthcare and Social Media industries.
+</p>
+<h4>Area of Mentorship: <span>Early Stage Ideation</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 5 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="471" height="429" src="http://rcoemtbi.org/wp-content/uploads/2024/12/5sarika-YrDlypebENcVOJbw.jpg" class="attachment-large size-large wp-image-1741" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/5sarika-YrDlypebENcVOJbw.jpg 471w, http://rcoemtbi.org/wp-content/uploads/2024/12/5sarika-YrDlypebENcVOJbw-300x273.jpg 300w" sizes="(max-width: 471px) 100vw, 471px">
+
+</div>
+
+<div class="mentor-info">
+<h1>SARIKA NARAYAN</h1>
+<h3>Independent Business|Consultant</h3>
+<p>
+Ms. Sarika Narayan leverages over two decades of experience in business planning, product development and marketing.
+</p>
+<h4>Area of Mentorship: <span>Business Strategy</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 6 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="480" height="413" src="http://rcoemtbi.org/wp-content/uploads/2024/12/6pratik-AE0obZlGk5sXLgeQ.jpg" class="attachment-large size-large wp-image-1747" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/6pratik-AE0obZlGk5sXLgeQ.jpg 480w, http://rcoemtbi.org/wp-content/uploads/2024/12/6pratik-AE0obZlGk5sXLgeQ-300x258.jpg 300w" sizes="(max-width: 480px) 100vw, 480px">
+
+</div>
+
+<div class="mentor-info">
+<h1>PRATIK BAHETI</h1>
+<h3>Senior Engineer | Capgemini</h3>
+<p>
+A seasoned engineer specializing in electronics with 9 years of expertise in product development.
+</p>
+<h4>Area of Mentorship: <span>Early Stage Ideation</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 7 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="506" height="421" src="http://rcoemtbi.org/wp-content/uploads/2024/12/7ritwik-YBgr6n0WEVuloBLZ.jpg" class="attachment-large size-large wp-image-1746" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/7ritwik-YBgr6n0WEVuloBLZ.jpg 506w, http://rcoemtbi.org/wp-content/uploads/2024/12/7ritwik-YBgr6n0WEVuloBLZ-300x250.jpg 300w" sizes="(max-width: 506px) 100vw, 506px">
+</div>
+
+<div class="mentor-info">
+<h1>RITWIK NIKAM</h1>
+<h3>Strategy Execution Manager | Merck Life Sciences</h3>
+<p>
+Mr. Ritwik Nikam has 14 years of experience turning strategic visions into successful business realities.
+</p>
+<h4>Area of Mentorship: <span>Business Strategy</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 8 -->
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="500" height="458" src="http://rcoemtbi.org/wp-content/uploads/2024/12/8amit-dWxyDW7z60hMJ5Pr.jpg" class="attachment-large size-large wp-image-1752" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/8amit-dWxyDW7z60hMJ5Pr.jpg 500w, http://rcoemtbi.org/wp-content/uploads/2024/12/8amit-dWxyDW7z60hMJ5Pr-300x275.jpg 300w" sizes="(max-width: 500px) 100vw, 500px">
+</div>
+
+<div class="mentor-info">
+<h1>AMIT RAHALKAR</h1>
+<h3>Senior Technology Program Manager | Amazon</h3>
+<p>
+With 23 years of experience, he guides strategic initiatives across technology and ecommerce sectors.
+</p>
+<h4>Area of Mentorship: <span>Technology</span></h4>
+</div>
+
+</div>
+
+
+<!-- Mentor 9 -->
+
+
+
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="509" height="458" src="http://rcoemtbi.org/wp-content/uploads/2024/12/10agha-mk3zWpPrK4CkZwvw.jpg" class="attachment-large size-large wp-image-1672" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/10agha-mk3zWpPrK4CkZwvw.jpg 509w, http://rcoemtbi.org/wp-content/uploads/2024/12/10agha-mk3zWpPrK4CkZwvw-300x270.jpg 300w" sizes="(max-width: 509px) 100vw, 509px">
+</div>
+
+<div class="mentor-info">
+<h1>AGHA AHMAD</h1>
+<h3>Founder & President | Afifa Foundation</h3>
+<p>Mr. Agha Ahmad, a seasoned social entrepreneur with over a decade of experience, is the visionary founder and president of Afifa Foundation, dedicated to guiding impactful initiatives for positive societal change
+</p>
+<h4>Area of Mentorship: Early Stage Ideation</h4>
+</div>
+
+</div>
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="449" height="403" src="http://rcoemtbi.org/wp-content/uploads/2024/12/12shabbir-dWxyDW7Ry2f6napX.jpg" class="attachment-large size-large wp-image-1674" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/12shabbir-dWxyDW7Ry2f6napX.jpg 449w, http://rcoemtbi.org/wp-content/uploads/2024/12/12shabbir-dWxyDW7Ry2f6napX-300x269.jpg 300w" sizes="(max-width: 449px) 100vw, 449px">
+</div>
+
+<div class="mentor-info">
+<h1>
+SHABBIR SHEIKH</h1>
+<h3>Program Manager (e-Mobility) | Schaeffler India Limited</h3>
+<p>Mr. Shabbir Sheikh, Program Manager of Future Mobility at Schaeffler India Limited, channels 16 years of expertise in fuel cell and thermal management technologies. His commitment to advancing automotive innovation fuels Schaeffler’s leadership in future mobility solutions.
+</p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="450" height="394" src="http://rcoemtbi.org/wp-content/uploads/2024/12/13kartik-AE0obZlLweSaEwBM.jpg" class="attachment-large size-large wp-image-1676" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/13kartik-AE0obZlLweSaEwBM.jpg 450w, http://rcoemtbi.org/wp-content/uploads/2024/12/13kartik-AE0obZlLweSaEwBM-300x263.jpg 300w" sizes="(max-width: 450px) 100vw, 450px">
+</div>
+
+<div class="mentor-info">
+<h1>KARTIK IYER</h1>
+<h3>Head of Operations | Practo Technologies</h3>
+<p>
+    Mr. Kartik Iyer, serving as the Head of Operations and Experience at Practo Technologies, brings two decades of extensive experience to the forefront, driving operational excellence and enhancing user experiences with remarkable proficiency.
+</p>
+<h4>Area of Mentorship: Operations</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+    <img loading="lazy" decoding="async" width="459" height="434" src="http://rcoemtbi.org/wp-content/uploads/2024/12/9adash-m2Wp3z7zbgSjRb4o.jpg" class="attachment-large size-large wp-image-1751" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/9adash-m2Wp3z7zbgSjRb4o.jpg 459w, http://rcoemtbi.org/wp-content/uploads/2024/12/9adash-m2Wp3z7zbgSjRb4o-300x284.jpg 300w" sizes="(max-width: 459px) 100vw, 459px">
+</div>
+
+<div class="mentor-info">
+<h1>
+Akash Naoghare</h1>
+<h3>
+
+Founder | Beejotsav, Akdee Clothing</h3>
+<p>
+   Mr. Akash Naoghare Founder of Beejotsav / Akdee Clothing, with a decade-long background in spearheading ventures at the intersection of Agriculture, Food Systems, Sustainability, and Fashion</p>
+<h4>Area of Mentorship: Early Stage Ideation
+</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="390" height="381" src="http://rcoemtbi.org/wp-content/uploads/2024/12/15nishchal-AoPvXp9apOH3ZOZ8.jpg" class="attachment-large size-large wp-image-1683" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/15nishchal-AoPvXp9apOH3ZOZ8.jpg 390w, http://rcoemtbi.org/wp-content/uploads/2024/12/15nishchal-AoPvXp9apOH3ZOZ8-300x293.jpg 300w" sizes="(max-width: 390px) 100vw, 390px">
+
+</div>
+
+<div class="mentor-info">
+<h1>NISHCHAL DIWATE</h1>
+<h3>Software Manager | Bosch (Germany)</h3>
+<p>
+    Mr. Nishchal, an accomplished Software Manager at Bosch in Germany, brings 13 years of expertise to the table, driving software development initiatives with precision and innovation in the automotive industry’s technological forefrontncy.
+</p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="448" height="368" src="http://rcoemtbi.org/wp-content/uploads/2024/12/16rohit-YNqyGjRnRahRDjgR.jpg" class="attachment-large size-large wp-image-1686" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/16rohit-YNqyGjRnRahRDjgR.jpg 448w, http://rcoemtbi.org/wp-content/uploads/2024/12/16rohit-YNqyGjRnRahRDjgR-300x246.jpg 300w" sizes="(max-width: 448px) 100vw, 448px">
+</div>
+
+<div class="mentor-info">
+<h1>
+ROHIT HIMTE</h1>
+<h3>Managing Director | Nodhrita Events Private Limited</h3>
+<p>
+Mr. Rohit Himte, the Managing Director of Nodhrita Events Pvt. Ltd., leverages eight years of expertise in both branding and digital marketing, driving the company’s brand visibility and digital presence to new heights in the competitive events industry.</p>
+<h4>Area of Mentorship: Business Strategy</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="415" height="422" src="http://rcoemtbi.org/wp-content/uploads/2024/12/17mahavir-dJo6yaR78eIq1Mgv.jpg" class="attachment-large size-large wp-image-1687" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/17mahavir-dJo6yaR78eIq1Mgv.jpg 415w, http://rcoemtbi.org/wp-content/uploads/2024/12/17mahavir-dJo6yaR78eIq1Mgv-295x300.jpg 295w" sizes="(max-width: 415px) 100vw, 415px">
+</div>
+
+<div class="mentor-info">
+<h1>MAHAVIR SHARMA</h1>
+<h3>Chairman | Rajasthan Angels</h3>
+<p>
+    Mr. Mahavir Pratap Sharma Chairman of Rajasthan Angels (RAIN), brings 13 years of expertise in guiding early-stage ideation across various domains. With an agnostic approach, he fosters innovation and growth in startup ecosystems.
+</p>
+<h4>Area of Mentorship: Early Stage Ideation</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="420" height="402" src="http://rcoemtbi.org/wp-content/uploads/2024/12/18riteshtoshniwal-mv0DGpgoBqC0aXrx.jpg" class="attachment-large size-large wp-image-1691" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/18riteshtoshniwal-mv0DGpgoBqC0aXrx.jpg 420w, http://rcoemtbi.org/wp-content/uploads/2024/12/18riteshtoshniwal-mv0DGpgoBqC0aXrx-300x287.jpg 300w" sizes="(max-width: 420px) 100vw, 420px">
+
+</div>
+
+<div class="mentor-info">
+<h1>RITESH TOSHNIWAL</h1>
+<h3>Managing Partner | ThinKuvate Ventures Private Limited</h3>
+<p>
+    Mr. Ritesh Toshniwal serves as the Managing Partner at ThinKuvate Ventures Pvt. Ltd. With a focus on startup investments, technology marketing, and enterprise go-to-market strategies, he brings 25 years of expertise to the table.
+</p>
+<h4>Area of Mentorship: Early Stage Ideation</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="447" height="404" src="http://rcoemtbi.org/wp-content/uploads/2024/12/19anand-YD06JMR03wCopaME.jpg" class="attachment-large size-large wp-image-1695" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/19anand-YD06JMR03wCopaME.jpg 447w, http://rcoemtbi.org/wp-content/uploads/2024/12/19anand-YD06JMR03wCopaME-300x271.jpg 300w" sizes="(max-width: 447px) 100vw, 447px">
+
+
+</div>
+
+<div class="mentor-info">
+<h1>
+ANAND TAJPURIYA</h1>
+<h3>Director | ART Capital</h3>
+<p>
+    Mr. Anand Tajpuriya, Director at ART Capital, specializing in startups, growth, sales, and business development with over 15 years of expertise. Proficient in marketing and branding strategies for fostering business success
+</p>
+<h4>Area of Mentorship: Marketing & Branding</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="414" height="397" src="http://rcoemtbi.org/wp-content/uploads/2024/12/20pankajholey-mP4ngER5kLs3wZ5y.jpg" class="attachment-large size-large wp-image-1696" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/20pankajholey-mP4ngER5kLs3wZ5y.jpg 414w, http://rcoemtbi.org/wp-content/uploads/2024/12/20pankajholey-mP4ngER5kLs3wZ5y-300x288.jpg 300w" sizes="(max-width: 414px) 100vw, 414px">
+</div>
+
+<div class="mentor-info">
+<h1>
+PANKAJ HOLEY</h1>
+<h3>Manager, Central Manufacturing Engg | Mahindra & Mahindra Limited</h3>
+<p>
+    Mr. Pankaj Holey, Manager at Mahindra and Mahindra Ltd, proficient in manufacturing and process excellence with 17 years of experience in operations management. Skilled in project management, driving initiatives for streamlined processes and enhanced productivity
+</p>
+<h4>Area of Mentorship: Operations</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="412" height="369" src="http://rcoemtbi.org/wp-content/uploads/2024/12/22rupali-d95KLwkWLxu5bX4p.jpg" class="attachment-large size-large wp-image-1702" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/22rupali-d95KLwkWLxu5bX4p.jpg 412w, http://rcoemtbi.org/wp-content/uploads/2024/12/22rupali-d95KLwkWLxu5bX4p-300x269.jpg 300w" sizes="(max-width: 412px) 100vw, 412px">
+</div>
+
+<div class="mentor-info">
+<h1>
+RUPALI MUDALIAR</h1>
+<h3>FinTech Consultant | IFSCA</h3>
+<p>
+Mr. Rupali Mudaliar, a Consultant at the International Financial Services Centres Authority (IFSCA) established by the Government of India, boasts over 11 years of extensive experience in FinTech, Legal, Company Secretarial, and Compliance domains</p>
+<h4>Area of Mentorship: Legal</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="406" height="380" src="http://rcoemtbi.org/wp-content/uploads/2024/12/23amitdubey-YD06JMRjobHRReqz.jpg" class="attachment-large size-large wp-image-1701" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/23amitdubey-YD06JMRjobHRReqz.jpg 406w, http://rcoemtbi.org/wp-content/uploads/2024/12/23amitdubey-YD06JMRjobHRReqz-300x281.jpg 300w" sizes="(max-width: 406px) 100vw, 406px">
+</div>
+
+<div class="mentor-info">
+<h1>
+AMIT DUBEY</h1>
+<h3>Head Business Development & Innovation | Linamar India Private Limited</h3>
+<p>
+   Mr. Amit Dubey is the Head of Business Development & Innovation at LINAMAR INDIA PVT LTD. With over 25 years of experience, he specializes in mechanical industrial sales, marketing, and branding.
+</p>
+<h4>Area of Mentorship: Marketing & Branding</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="446" height="413" src="http://rcoemtbi.org/wp-content/uploads/2024/12/24dheeraj-mk3zWpbyDrfDRLBN.jpg" class="attachment-large size-large wp-image-1709" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/24dheeraj-mk3zWpbyDrfDRLBN.jpg 446w, http://rcoemtbi.org/wp-content/uploads/2024/12/24dheeraj-mk3zWpbyDrfDRLBN-300x278.jpg 300w" sizes="(max-width: 446px) 100vw, 446px">
+
+</div>
+
+<div class="mentor-info">
+<h1>
+DHEERAJ KUMAR</h1>
+<h3>Deputy Director | TEXMiN (IIT / ISM)</h3>
+<p>
+    Mr. Dheeraj Kumar holds the position of Deputy Director and Director at TEXMiN within IIT (ISM). With two decades of experience, he specializes in technology implementation and management.
+</p>
+<h4>Area of Mentorship: Technology</span></h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="409" height="413" src="http://rcoemtbi.org/wp-content/uploads/2024/12/25zulfikar-Aq2v9p4NVoC35kVP.jpg" class="attachment-large size-large wp-image-1708" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/25zulfikar-Aq2v9p4NVoC35kVP.jpg 409w, http://rcoemtbi.org/wp-content/uploads/2024/12/25zulfikar-Aq2v9p4NVoC35kVP-297x300.jpg 297w, http://rcoemtbi.org/wp-content/uploads/2024/12/25zulfikar-Aq2v9p4NVoC35kVP-150x150.jpg 150w" sizes="(max-width: 409px) 100vw, 409px">	
+</div>
+
+<div class="mentor-info">
+<h1>
+ZULFIKAR ANIS</h1>
+<h3>Senior Cost Engineer | Aramco</h3>
+<p>
+Mr. Zulfikar Anis a Senior Cost Engineer at Aramco, boasts a decade of experience in oil and gas project controls. With a strong foundation in business strategy, he plays a pivotal role in optimizing project costs and ensuring efficient execution within the industry</p>
+<h4>Area of Mentorship: <span>Business</span></h4>
+</div>
+
+</div>
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="397" height="376" src="http://rcoemtbi.org/wp-content/uploads/2024/12/26raghu-AQEyr7lyE2TGoovV.jpg" class="attachment-large size-large wp-image-1707" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/26raghu-AQEyr7lyE2TGoovV.jpg 397w, http://rcoemtbi.org/wp-content/uploads/2024/12/26raghu-AQEyr7lyE2TGoovV-300x284.jpg 300w" sizes="(max-width: 397px) 100vw, 397px">
+
+</div>
+
+<div class="mentor-info">
+<h1>RAGHU KODUMURI</h1>
+<h3>Senior Services Architect | Okta</h3>
+<p>
+    Mr. Raghu Kodumuri Senior Services Architect at Okta, Louisville boasts 25 years in IT, digital, and automation, adept at crafting innovative strategies and excelling in business strategy.
+</p>
+<h4>Area of Mentorship: Business Strategy</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="438" height="386" src="http://rcoemtbi.org/wp-content/uploads/2024/12/27ashish-YNqyGjRProU6y8ZK.jpg" class="attachment-large size-large wp-image-1706" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/27ashish-YNqyGjRProU6y8ZK.jpg 438w, http://rcoemtbi.org/wp-content/uploads/2024/12/27ashish-YNqyGjRProU6y8ZK-300x264.jpg 300w" sizes="(max-width: 438px) 100vw, 438px">
+</div>
+
+<div class="mentor-info">
+<h1>ASHISH SHRIVASTAVA</h1>
+<h3>Head (IT) | Bajaj Electricals Limited</h3>
+<p>
+    Mr. Ashish Shrivastava General Manager of Information Technology at Bajaj electricals limited, Possesses 26 Years of Expertise In FMEG, Manufacturing, IT, Logistics, And BFSI Sectors, With A Profound Focus on Technology.
+</p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="395" height="362" src="http://rcoemtbi.org/wp-content/uploads/2024/12/28abhaydudhankar-mp8vQpyW5PUXG3NB.jpg" class="attachment-large size-large wp-image-1713" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/28abhaydudhankar-mp8vQpyW5PUXG3NB.jpg 395w, http://rcoemtbi.org/wp-content/uploads/2024/12/28abhaydudhankar-mp8vQpyW5PUXG3NB-300x275.jpg 300w" sizes="(max-width: 395px) 100vw, 395px">
+
+</div>
+
+<div class="mentor-info">
+<h1>ABHAY DUDHANKAR</h1>
+<h3>Deputy Manager(IT) | Arabian Rock Engineering</h3>
+<p>
+    Mr. Abhay Dudhankar holds the position of Deputy Manager at Arabian Rock Engineering Co. LLC, specializing in drilling and blasting with 25 years of experience in blasting, explosives, mining, and underground excavation.
+</p>
+<h4>Area of Mentorship: Any</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="393" height="405" src="http://rcoemtbi.org/wp-content/uploads/2024/12/29sangita-mp8vQpy4MLsxjE9P.jpg" class="attachment-large size-large wp-image-1711" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/29sangita-mp8vQpy4MLsxjE9P.jpg 393w, http://rcoemtbi.org/wp-content/uploads/2024/12/29sangita-mp8vQpy4MLsxjE9P-291x300.jpg 291w" sizes="(max-width: 393px) 100vw, 393px">
+</div>
+
+<div class="mentor-info">
+<h1>SANGITA RAJANKAR</h1>
+<h3>Associate Scientist | MRSAC</h3>
+<p>
+    Ms. Sangita Rajankar serves as an Associate Scientist at Maharashtra Remote Sensing Application Centre, focusing on geospatial development. With over 20 years of experience, she excels in leveraging technology for spatial analysis and application.
+</p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="403" height="359" src="http://rcoemtbi.org/wp-content/uploads/2024/12/30arnab-dOqyV5Rp8KHleaBD.jpg" class="attachment-large size-large wp-image-1720" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/30arnab-dOqyV5Rp8KHleaBD.jpg 403w, http://rcoemtbi.org/wp-content/uploads/2024/12/30arnab-dOqyV5Rp8KHleaBD-300x267.jpg 300w" sizes="(max-width: 403px) 100vw, 403px">
+</div>
+
+<div class="mentor-info">
+<h1>ARNAB BISWAS</h1>
+<h3>Business Development Manager | Amazon</h3>
+<p>
+    Mr. Arnab Biswas a Business Development Leader at Amazon, specializes in life sciences, cloud, and Gen AI. With 25 years of experience, he excels in crafting innovative business strategies for growth and advancement.
+  </p>
+<h4>Area of Mentorship: Business Strategy</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="454" height="386" src="http://rcoemtbi.org/wp-content/uploads/2024/12/31neha-AzGeop2Px9SZV0J4.jpg" class="attachment-large size-large wp-image-1719" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/31neha-AzGeop2Px9SZV0J4.jpg 454w, http://rcoemtbi.org/wp-content/uploads/2024/12/31neha-AzGeop2Px9SZV0J4-300x255.jpg 300w" sizes="(max-width: 454px) 100vw, 454px">
+</div>
+
+<div class="mentor-info">
+<h1>NEHA VEDANTWAR</h1>
+<h3>Chief Executive Officer | WhiteChalk Private Limited</h3>
+<p>
+    Ms. Neha Vedantwar leads as CEO at The WhiteChalk Pvt. Ltd., specializing in digital performance marketing. With 17 years of expertise, she excels in crafting effective marketing and branding strategies, driving growth and success in the ever-evolving digital landscape.
+ </p>
+<h4>Area of Mentorship: Marketing & Branding</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="452" height="382" src="http://rcoemtbi.org/wp-content/uploads/2024/12/32shivshankar-YD06JMRb2Gu4yPxR.jpg" class="attachment-large size-large wp-image-1717" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/32shivshankar-YD06JMRb2Gu4yPxR.jpg 452w, http://rcoemtbi.org/wp-content/uploads/2024/12/32shivshankar-YD06JMRb2Gu4yPxR-300x254.jpg 300w" sizes="(max-width: 452px) 100vw, 452px">
+</div>
+
+<div class="mentor-info">
+<h1>SHIVSHANKAR BALASUBRAMANIAN</h1>
+<h3>Finance Transformation Manager | Google</h3>
+<p>
+   Mr. Shivshankar Balasubramanian a Finance Transformation Manager at Google with over a decade of experience . Specializing in Hi -tech, FinTech, and Financing for Tech, Shiv excels in driving financial innovation and strategy </p>
+<h4>Area of Mentorship: Finance</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="414" height="388" src="http://rcoemtbi.org/wp-content/uploads/2024/12/33ayush-AQEyr7lwKlhWBOl8.jpg" class="attachment-large size-large wp-image-1716" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/33ayush-AQEyr7lwKlhWBOl8.jpg 414w, http://rcoemtbi.org/wp-content/uploads/2024/12/33ayush-AQEyr7lwKlhWBOl8-300x281.jpg 300w" sizes="(max-width: 414px) 100vw, 414px">
+</div>
+
+<div class="mentor-info">
+<h1>
+AYUSH TYAGI</h1>
+<h3>Mentor | iStart</h3>
+<p>
+   Mr. Ayush Tyagi a Mentor at iStart, brings over nine years of expertise as a Community Builder, with prior roles as an Investment Head and Funding specialist. Focused on funding and capital management, Ayush is dedicated to nurturing and empowering entrepreneurial communities.</p>
+<h4>Area of Mentorship: Capital Management</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="459" height="384" src="http://rcoemtbi.org/wp-content/uploads/2024/12/34ravi-YbNvjpEzryu5av22.jpg" class="attachment-large size-large wp-image-1721" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/34ravi-YbNvjpEzryu5av22.jpg 459w, http://rcoemtbi.org/wp-content/uploads/2024/12/34ravi-YbNvjpEzryu5av22-300x251.jpg 300w" sizes="(max-width: 459px) 100vw, 459px">
+
+</div>
+
+<div class="mentor-info">
+<h1>RAVI KIKAN</h1>
+<h3>Global Chief Marketing Officer | United WeCare</h3>
+<p>
+   Mr. Ravi Kikan serving as the Global Chief Marketing Officer at United We Care, boasts 24 years of experience in driving agnostic business growth strategies . With a profound dedication to marketing excellence, Ravi spearheads initiatives that prioritize global well -being and community empowerment </p>
+<h4>Area of Mentorship: Any</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+
+<img loading="lazy" decoding="async" width="398" height="423" src="http://rcoemtbi.org/wp-content/uploads/2024/12/35abid-mv0DGpgpBqtLONJn.jpg" class="attachment-large size-large wp-image-1722" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/35abid-mv0DGpgpBqtLONJn.jpg 398w, http://rcoemtbi.org/wp-content/uploads/2024/12/35abid-mv0DGpgpBqtLONJn-282x300.jpg 282w" sizes="(max-width: 398px) 100vw, 398px">
+
+</div>
+
+<div class="mentor-info">
+<h1>
+ABID ALI</h1>
+<h3>Founder | ByteWorks</h3>
+<p>
+   Mr. Abid Ali, Founder of ByteWorks, drives innovation in AI/ML with over 24 years of experience. His visionary leadership in product development reshapes industries and sets new standards for technological advancement</p>
+<h4>Area of Mentorship: Product Development</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="479" height="420" src="http://rcoemtbi.org/wp-content/uploads/2024/12/36rhythm-YrDlypKr9etQ6DRo.jpg" class="attachment-large size-large wp-image-1724" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/36rhythm-YrDlypKr9etQ6DRo.jpg 479w, http://rcoemtbi.org/wp-content/uploads/2024/12/36rhythm-YrDlypKr9etQ6DRo-300x263.jpg 300w" sizes="(max-width: 479px) 100vw, 479px">
+</div>
+
+<div class="mentor-info">
+<h1>RHYTHM GOYAL</h1>
+<h3>Associate Director | Monotype</h3>
+<p>
+   Mr. Rhythm Goyal, Associate Director of Platform Engineering at Monotype. With over 14 years of experience in the technology sector, Rhythm brings a wealth of expertise to our team.</p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="476" height="379" src="http://rcoemtbi.org/wp-content/uploads/2024/12/37sushant-YanyLp589Wt9QQpD.jpg" class="attachment-large size-large wp-image-1723" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/37sushant-YanyLp589Wt9QQpD.jpg 476w, http://rcoemtbi.org/wp-content/uploads/2024/12/37sushant-YanyLp589Wt9QQpD-300x239.jpg 300w" sizes="(max-width: 476px) 100vw, 476px">
+
+</div>
+
+<div class="mentor-info">
+<h1>
+SUSHANT BHARGAVA</h1>
+<h3>Senior Executive Manager | Godrej & Boyce Manufacturing Corporation Limited</h3>
+<p>
+  Mr. Sushant Bhargava is a seasoned Senior Executive Marketing at Godrej & Boyce mfg. co. ltd. ,boasting a 16 years of diverse experience manufacturing and management.</p>
+  <h4>Area of Mentorship: Business Strategy</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="414" height="381" src="http://rcoemtbi.org/wp-content/uploads/2024/12/38kirti-AGB6XeRRqwc1a7ob.jpg" class="attachment-large size-large wp-image-1726" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/38kirti-AGB6XeRRqwc1a7ob.jpg 414w, http://rcoemtbi.org/wp-content/uploads/2024/12/38kirti-AGB6XeRRqwc1a7ob-300x276.jpg 300w" sizes="(max-width: 414px) 100vw, 414px">
+</div>
+
+<div class="mentor-info">
+<h1>KIRTI NIKAM</h1>
+<h3>Academician & Researcher | Manipal School of Architecture & Planning</h3>
+<p>
+   Dr. Kirti Nikam is a experienced professor at Manipal School of Architecture & Planning, Manipal, Karnataka boasting a diverse experience in Research and innovations.</p>
+<h4>Area of Mentorship: Ideation</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="417" height="408" src="http://rcoemtbi.org/wp-content/uploads/2024/12/39sourabh-dWxyDWZR36Hn6PLN.jpg" class="attachment-large size-large wp-image-1727" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/39sourabh-dWxyDWZR36Hn6PLN.jpg 417w, http://rcoemtbi.org/wp-content/uploads/2024/12/39sourabh-dWxyDWZR36Hn6PLN-300x294.jpg 300w" sizes="(max-width: 417px) 100vw, 417px">
+</div>
+
+<div class="mentor-info">
+<h1>
+SOURABH TAPAS</h1>
+<h3>SoC Functional Verification Lead | NXP Semiconductors</h3>
+<p>Mr. Sourabh Tapas is a experienced SoC Functional verification Lead in NXP Semiconductors boasting a diverse experience and knowledge in electronics and semiconductors which can help in Research and innovations.
+  </p>
+<h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="418" height="415" src="http://rcoemtbi.org/wp-content/uploads/2024/12/40devansh-A3QweqRevvfl4OLZ.jpg" class="attachment-large size-large wp-image-1733" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/40devansh-A3QweqRevvfl4OLZ.jpg 418w, http://rcoemtbi.org/wp-content/uploads/2024/12/40devansh-A3QweqRevvfl4OLZ-300x298.jpg 300w, http://rcoemtbi.org/wp-content/uploads/2024/12/40devansh-A3QweqRevvfl4OLZ-150x150.jpg 150w" sizes="(max-width: 418px) 100vw, 418px">
+</div>
+
+<div class="mentor-info">
+<h1>
+DEVANSH LAKHANI</h1>
+<h3>Director | Lakhani Financial Services</h3>
+<p>
+    Mr. Devansh Lakhani is a Director at Lakhani Financial Services, boasting a diverse experience and knowledge in Fundraising and boosting Startups growth which can help in Research and innovations
+</p><h4>Area of Mentorship: Funding & Capital Management</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="455" height="404" src="http://rcoemtbi.org/wp-content/uploads/2024/12/41piyush-Yyv3rp8zPqcNBQLL.jpg" class="attachment-large size-large wp-image-1734" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/41piyush-Yyv3rp8zPqcNBQLL.jpg 455w, http://rcoemtbi.org/wp-content/uploads/2024/12/41piyush-Yyv3rp8zPqcNBQLL-300x266.jpg 300w" sizes="(max-width: 455px) 100vw, 455px">
+
+</div>
+
+<div class="mentor-info">
+<h1>PIYUSH JHA</h1>
+<h3>Product Marketing Manager | Google, India</h3>
+<p>
+    Mr. Piyush Jha is a experienced Product marketing manager in Google, India boasting a diverse experience and knowledge in product design and marketing strategies which can help in Research and innovations.
+</p><h4>Area of Mentorship: Marketing & Branding</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+
+<img loading="lazy" decoding="async" width="405" height="417" src="http://rcoemtbi.org/wp-content/uploads/2024/12/42vinod-YNqyGjRwe3U8aPNe.jpg" class="attachment-large size-large wp-image-1731" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/42vinod-YNqyGjRwe3U8aPNe.jpg 405w, http://rcoemtbi.org/wp-content/uploads/2024/12/42vinod-YNqyGjRwe3U8aPNe-291x300.jpg 291w" sizes="(max-width: 405px) 100vw, 405px">
+
+</div>
+
+<div class="mentor-info">
+<h1>
+VINOD MIDHA</h1>
+<h3>Partner | Simple Sell Solutions LLP</h3>
+<p>
+    Vinod Midha, Partner at Simple Sell Solutions LLP, leveraging 49 years of expertise in pioneering Product & Business Development across Energy, Industry, Defence, and Renewables sectors.
+</p><h4>Area of Mentorship: Early Stage Ideation</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="440" height="416" src="http://rcoemtbi.org/wp-content/uploads/2024/12/43shamik-YZ9V3wRL9JUJjDXD.jpg" class="attachment-large size-large wp-image-1732" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/43shamik-YZ9V3wRL9JUJjDXD.jpg 440w, http://rcoemtbi.org/wp-content/uploads/2024/12/43shamik-YZ9V3wRL9JUJjDXD-300x284.jpg 300w" sizes="(max-width: 440px) 100vw, 440px">
+</div>
+
+<div class="mentor-info">
+<h1>SHAMIK UKIL</h1>
+<h3>Chartered Accountant | Advisory Monks Consulting</h3>
+<p>Shamik Ukil, a Chartered Accountant with Advisory Monks Consulting, bringing 8 years of specialized expertise in Legal matters.
+
+</p><h4>Area of Mentorship: Legal</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="422" height="421" src="http://rcoemtbi.org/wp-content/uploads/2024/12/44akshay-mxBZgpRQO6UD2qwB.jpg" class="attachment-large size-large wp-image-1735" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/44akshay-mxBZgpRQO6UD2qwB.jpg 422w, http://rcoemtbi.org/wp-content/uploads/2024/12/44akshay-mxBZgpRQO6UD2qwB-300x300.jpg 300w, http://rcoemtbi.org/wp-content/uploads/2024/12/44akshay-mxBZgpRQO6UD2qwB-150x150.jpg 150w" sizes="(max-width: 422px) 100vw, 422px">
+</div>
+
+<div class="mentor-info">
+<h1>AKSHAY UMBARKAR</h1>
+<h3>Managing Partner | Winspro EXIM</h3>
+<p>
+    Akshay Umbarkar, Managing Partner at Winspro Exim, with over 13 years of experience in Export and Import, Business incubation, Teaching, and International Marketing
+
+</p><h4>Area of Mentorship: Import Export, Product Development</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="420" height="412" src="http://rcoemtbi.org/wp-content/uploads/2024/12/45gaurav-AR0yovrZwRFJKMPk.jpg" class="attachment-large size-large wp-image-1736" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/45gaurav-AR0yovrZwRFJKMPk.jpg 420w, http://rcoemtbi.org/wp-content/uploads/2024/12/45gaurav-AR0yovrZwRFJKMPk-300x294.jpg 300w" sizes="(max-width: 420px) 100vw, 420px">
+
+</div>
+
+<div class="mentor-info">
+<h1>GAURAV TRIPATHI</h1>
+<h3>Co-founder & Group CTO | Innoplexus</h3>
+<p>
+    Gaurav Tripathi, Co-founder and Group CTO at Innoplexus, where he brings 20 years of visionary leadership and technical innovation at the forefront of Technology and Life Sciences.
+
+</p><h4>Area of Mentorship: Technology</h4>
+</div>
+
+</div>
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="424" height="431" src="http://rcoemtbi.org/wp-content/uploads/2024/12/46rajesh-YD06JMW0ZVhBQOqX.jpg" class="attachment-large size-large wp-image-1737" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/46rajesh-YD06JMW0ZVhBQOqX.jpg 424w, http://rcoemtbi.org/wp-content/uploads/2024/12/46rajesh-YD06JMW0ZVhBQOqX-295x300.jpg 295w" sizes="(max-width: 424px) 100vw, 424px">
+</div>
+
+<div class="mentor-info">
+<h1>
+DR. RAJESH JAWARE</h1>
+<h3>Incharge Innovation Management | Maharashtra State Skills University Mumbai</h3>
+<p>
+    Dr. Rajesh Jaware, Professor Incharge of Innovation Management at Maharashtra State Skills University Mumbai, specializes in Industrial Engineering and Operations Management with a rich experience of 30 years
+
+</p><h4>Area of Mentorship: Early Stage Ideation</h4>
+</div>
+
+</div>
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+<img loading="lazy" decoding="async" width="434" height="406" src="http://rcoemtbi.org/wp-content/uploads/2024/12/47monish-m5KwB61gevsEP9Vr.jpg" class="attachment-large size-large wp-image-1738" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/47monish-m5KwB61gevsEP9Vr.jpg 434w, http://rcoemtbi.org/wp-content/uploads/2024/12/47monish-m5KwB61gevsEP9Vr-300x281.jpg 300w" sizes="(max-width: 434px) 100vw, 434px">
+
+</div>
+
+<div class="mentor-info">
+<h1>
+MONISH SALHOTRA</h1>
+<h3>Innovation Officer | NOISE</h3>
+<p>
+    Monish Salhotra serves as the Innovation Officer at Noise, where he spearheads product development in the realm of consumer electronics, leveraging 12 years of industry expertise.
+</p><h4>Area of Mentorship: Product Development</h4>
+</div>
+
+</div>
+
+
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+    <img loading="lazy" decoding="async" width="398" height="438" src="http://rcoemtbi.org/wp-content/uploads/2024/12/11pankaj-A0xwM7550BTJxEr2.jpg" class="attachment-large size-large wp-image-1671" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/11pankaj-A0xwM7550BTJxEr2.jpg 398w, http://rcoemtbi.org/wp-content/uploads/2024/12/11pankaj-A0xwM7550BTJxEr2-273x300.jpg 273w" sizes="(max-width: 398px) 100vw, 398px">
+</div>
+
+<div class="mentor-info">
+<h1>
+
+PANKAJ KATIYAR</h1>
+<h3>Senior Manager Hardware System Engg | Micron Technology</h3>
+<p>
+    Mr. Pankaj Katiyar, a seasoned Senior Manager in Hardware System Engineering at Micron Technology, brings invaluable expertise to the table, embodying excellence in technological innovation and leadership.
+ </p>  <h4>Area of Mentorship: Product Development
+</h4>
+</div>
+
+</div>
+
+<div class="mentor-container">
+
+<div class="mentor-image">
+   <img loading="lazy" decoding="async" width="454" height="402" src="http://rcoemtbi.org/wp-content/uploads/2024/12/14anshul-d95KLwJXWbC21gG2.jpg" class="attachment-large size-large wp-image-1677" alt="" srcset="http://rcoemtbi.org/wp-content/uploads/2024/12/14anshul-d95KLwJXWbC21gG2.jpg 454w, http://rcoemtbi.org/wp-content/uploads/2024/12/14anshul-d95KLwJXWbC21gG2-300x266.jpg 300w" sizes="(max-width: 454px) 100vw, 454px"></div>
+
+<div class="mentor-info">
+<h1>
+
+
+ANSHUL RATHI</h1>
+<h3>Founder & CEO | CertifyOS</h3>
+<p>  
+    Mr. Anshul Rathi, the CEO of CertifyOS, leads with vision and innovation, driving the company forward with 8 years of dynamic leadership and a commitment to excellence in the cybersecurity industry.
+</p>  <h4> Area of Mentorship: Early Stage Ideation
+</h4>
+</div>
+
+</div>
+</div>
+
+</section>
+        </div>
+    </div>
+</div>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
+
+<!-- MENTORING PROCESS -->
+<div class="page-section" style="padding-top:60px;padding-bottom:60px;">
+    <div class="section-label">THE PROCESS</div>
+    <h2 class="page-heading" style="margin-bottom:50px;">HOW MENTORING WORKS</h2>
+
+    <div class="numbered-grid">
+        <div class="numbered-item">
+            <span class="num-badge">01</span>
+            <div class="num-content">
+                <h4>Introduction</h4>
+                <p>When a start-up is admitted, RCOEM TBI recommends a mentor from its list and introduces him/her to the startup.</p>
+            </div>
+        </div>
+        <div class="numbered-item">
+            <span class="num-badge">02</span>
+            <div class="num-content">
+                <h4>Choice</h4>
+                <p>Founders are free to choose from the recommended list or have their own mentor, with the concurrence of RCOEM TBI.</p>
+            </div>
+        </div>
+        <div class="numbered-item">
+            <span class="num-badge">03</span>
+            <div class="num-content">
+                <h4>Engagement</h4>
+                <p>The startup and mentor initially engage to understand the role and contribution that the mentor can make to the startup.</p>
+            </div>
+        </div>
+        <div class="numbered-item">
+            <span class="num-badge">04</span>
+            <div class="num-content">
+                <h4>Formalization</h4>
+                <p>If the arrangement works positively for both, the association is formalized with a suitable consideration model for continued involvement.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
+
+<!-- MENTORING VISUAL -->
+<div class="page-section" style="padding-top:60px;padding-bottom:60px;">
+    <div class="split-layout" style="align-items:center;">
+        <div>
+            <div class="section-label">PROCESS OVERVIEW</div>
+            <h2 class="page-heading" style="margin-bottom:20px;">FROM MATCH TO MILESTONE</h2>
+            <p class="mono-text">Our structured mentoring framework connects the right mentor to the right startup — fostering long-term relationships that drive real results, not just one-off advice sessions.</p>
+        </div>
+        <div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tbi-mentoring-process.jpg"
+                 alt="Mentoring Process"
+                 style="width:100%; object-fit:cover; height:360px; display:block;">
+            <span class="img-label">Mentoring Process at RCOEM TBI</span>
+        </div>
+    </div>
+</div>
+
+<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
+
+<!-- CTAs -->
+<div class="page-section" style="padding-top:60px;padding-bottom:80px;">
+    <div class="section-label">GET INVOLVED</div>
+    <div class="split-layout">
+        <div class="accent-card" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;">
+            <div>
+                <div class="card-label">LOOKING FOR A MENTOR?</div>
+                <p>Apply to get matched with an industry expert who can guide your startup journey from idea to enterprise.</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScP_MK7ARNTKByBObMe1zReK6qVftwsOCcorLnwGQcvKpcA9w/formrestricted"
+               target="_blank"
+               style="display:inline-block; background:#0057B0; color:#fff; padding:12px 28px; font-weight:700; font-family:var(--mono); font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; align-self:flex-start;">
+                APPLY NOW →
+            </a>
+        </div>
+        <div class="accent-card" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;">
+            <div>
+                <div class="card-label">WANT TO BE A MENTOR?</div>
+                <p>Help the next generation of entrepreneurs achieve their dreams. Share your expertise and make a lasting impact.</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUNL8lGtIq4ETdwWifHfbv6G0zhycj8_JeDGHcnt8uFM_88g/viewform"
+               target="_blank"
+               style="display:inline-block; background:#0057B0; color:#fff; padding:12px 28px; font-weight:700; font-family:var(--mono); font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; align-self:flex-start;">
+                BECOME A MENTOR →
+            </a>
+        </div>
+    </div>
+</div>
+
+<?php get_footer(); ?>

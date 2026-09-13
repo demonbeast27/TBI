@@ -1,0 +1,155 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(120deg,#eef2f7,#f8f9fc);
+color:#222;
+}
+
+/* Section */
+
+.mentor-section{
+padding:80px 6%;
+}
+
+/* Horizontal Scroll */
+
+.mentor-scroll{
+display:flex;
+gap:60px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:20px;
+}
+
+.mentor-scroll::-webkit-scrollbar{
+height:8px;
+}
+
+.mentor-scroll::-webkit-scrollbar-track{
+background:transparent;
+}
+
+.mentor-scroll::-webkit-scrollbar-thumb{
+background:#c7d2e3;
+border-radius:10px;
+}
+
+/* Mentor Card */
+
+.mentor-container{
+display:flex;
+align-items:center;
+gap:50px;
+min-width:850px;
+
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+
+padding:50px;
+border-radius:20px;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.08),
+0 3px 8px rgba(0,0,0,0.04);
+
+transition:all 0.3s ease;
+}
+
+/* Hover Effect */
+
+.mentor-container:hover{
+transform:translateY(-8px);
+box-shadow:
+0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Image */
+
+.mentor-image{
+width:260px;
+height:260px;
+border-radius:50%;
+padding:10px;
+background:linear-gradient(135deg,#0a2c63,#3a6ed8);
+flex-shrink:0;
+}
+
+.mentor-image img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+}
+
+/* Mentor Text */
+
+.mentor-info{
+max-width:500px;
+}
+
+/* Name */
+
+.mentor-info h1{
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+margin-bottom:8px;
+}
+
+/* Job */
+
+.mentor-info h3{
+font-size:18px;
+font-weight:500;
+color:#5c6b82;
+margin-bottom:20px;
+}
+
+/* Description */
+
+.mentor-info p{
+font-size:15px;
+line-height:1.7;
+color:#555;
+margin-bottom:25px;
+}
+
+/* Mentorship */
+
+.mentor-info h4{
+font-size:17px;
+font-weight:600;
+}
+
+.mentor-info span{
+color:#0a2c63;
+font-weight:700;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:900px){
+
+.mentor-container{
+flex-direction:column;
+text-align:center;
+min-width:350px;
+padding:35px;
+}
+
+.mentor-image{
+width:200px;
+height:200px;
+}
+
+.mentor-info{
+max-width:100%;
+}
+
+}

@@ -1,0 +1,184 @@
+/* ================================================================
+   How We Help Section — Converging Path Layout
+   Brand color: #0057B0
+   ================================================================ */
+
+.hwh-section {
+  background: #fdfdfa;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hwh-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Section header ──────────────────────────────────────────── */
+.hwh-header {
+  text-align: left;
+  margin-bottom: 64px;
+}
+.hwh-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0057B0;
+  margin-bottom: 12px;
+}
+.hwh-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: #0d1117;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* ── Layout Body ─────────────────────────────────────────────── */
+.hwh-body {
+  position: relative;
+  display: flex;
+}
+
+/* ── Left Side: List ─────────────────────────────────────────── */
+.hwh-list {
+  width: 48%; /* leaves 52% for the SVG lines */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hwh-item {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  position: relative;
+}
+
+/* Connection point tracker for JS (invisible point at right edge of row) */
+.hwh-row-anchor {
+  position: absolute;
+  right: -24px; /* push slightly out to meet the SVG */
+  top: 50%;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.hwh-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d1117;
+  line-height: 1;
+  padding-top: 4px;
+  min-width: 44px;
+}
+
+.hwh-divider {
+  width: 3px;
+  background: #0057B0;
+  border-radius: 2px;
+  flex-shrink: 0;
+  /* Instead of a fixed height, it stretches due to align-items: stretch */
+}
+
+.hwh-content {
+  flex: 1;
+  padding-bottom: 8px; /* Extra space below desc */
+}
+
+.hwh-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.hwh-icon {
+  width: 26px;
+  height: 26px;
+  color: #0057B0;
+  flex-shrink: 0;
+}
+
+.hwh-item-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0d1117;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hwh-item-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Right Side: SVG Canvas ──────────────────────────────────── */
+.hwh-svg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hwh-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hwh-path {
+  fill: none;
+  stroke: #0057B0;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  /* GSAP will animate draw-in if desired */
+}
+
+.hwh-success-figure {
+  color: #0d1117;
+  /* The figure itself will be an SVG symbol positioned by JS */
+}
+
+/* ── Mobile View ─────────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .hwh-list {
+    width: 100%;
+  }
+  .hwh-svg-wrapper {
+    display: none; /* Hide converging lines on smaller screens to prevent clutter/overflow */
+  }
+}
+
+@media (max-width: 768px) {
+  .hwh-container {
+    padding: 0 24px;
+  }
+  .hwh-section {
+    padding: 70px 0;
+  }
+  .hwh-num {
+    font-size: 2rem;
+    min-width: 36px;
+  }
+  .hwh-item-title {
+    font-size: 1.15rem;
+  }
+  .hwh-item-desc {
+    font-size: 0.9rem;
+  }
+}
