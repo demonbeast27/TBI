@@ -8,23 +8,22 @@
 
   // ── Data ─────────────────────────────────────────────────────
   const OBJECTIVES = [
-    { num: '01', title: 'Eco-System',           tags: ['Innovation','Growth'] },
-    { num: '02', title: 'Venture Creation',      tags: ['Startups','Innovation'] },
-    { num: '03', title: 'Tech Commercialization',tags: ['Commercialization','IPR'] },
-    { num: '04', title: 'Interfacing',           tags: ['Industry','Academia'] },
-    { num: '05', title: 'Networking',            tags: ['Connect','Collaborate'] },
-    { num: '06', title: 'Value Addition',        tags: ['Services','Support'] },
+    { num: '01', title: 'Eco-System' },
+    { num: '02', title: 'Venture Creation' },
+    { num: '03', title: 'Tech Commercialization' },
+    { num: '04', title: 'Networking' },
+    { num: '05', title: 'Value Addition' },
   ];
 
   // SVG coordinate space
   const SVG_W      = 1120;  // matches the max-width of the inner body
-  const STEP_H     = 240;   // REDUCED: px per objective slot to make scroll faster
-  const SVG_H      = STEP_H * OBJECTIVES.length; // 1440
+  const STEP_H     = 205;   // Compact height per slot
+  const SVG_H      = STEP_H * OBJECTIVES.length; // 1025px
   const CX         = SVG_W / 2;                  // 560 — center x
 
-  // Node x positions
-  const LEFT_X  = 300;
-  const RIGHT_X = SVG_W - 300; // 820
+  // Node x positions (shifted to give cards ample 350px+ width)
+  const LEFT_X  = 410;
+  const RIGHT_X = SVG_W - 410; // 710
 
   // Node y positions: center of each slot
   function nodeY(i) { return STEP_H * i + STEP_H / 2; } // 120, 360, 600 …
@@ -123,14 +122,15 @@
       const pxX = nx * scaleX;
       const pxY = ny * scaleX; // uniform scale based on width
 
+      const circleRadius = 44; // half of 88px circle width
       if (side === 'left') {
         step.style.left  = '0';
-        step.style.width = `${pxX + 55}px`; // 55 is half of the 110px circle width
+        step.style.width = `${pxX + circleRadius}px`;
         step.style.right = 'auto';
         step.style.top   = `${pxY}px`;
       } else {
         step.style.right = '0';
-        step.style.width = `${bodyW - (pxX - 55)}px`;
+        step.style.width = `${bodyW - (pxX - circleRadius)}px`;
         step.style.left  = 'auto';
         step.style.top   = `${pxY}px`;
       }

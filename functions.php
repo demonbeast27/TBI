@@ -11,6 +11,9 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Shared data: primary navigation (menu panel + footer quick links)
+require_once get_template_directory() . '/inc/nav-data.php';
+
 /**
  * Theme Setup
  */
@@ -35,57 +38,77 @@ function tbi_theme_setup()
 add_action('after_setup_theme', 'tbi_theme_setup');
 
 /**
+ * Infinite scrolling grid background for a page hero.
+ *
+ * Must be called as the FIRST child of the hero element, which must be
+ * position:relative. Hero content needs position:relative + z-index:1 so
+ * the absolutely positioned grid layers sit behind the text.
+ */
+function tbi_hero_grid()
+{
+    echo '<div class="hero-infinite-grid" aria-hidden="true">'
+        . '<div class="hero-grid-layer hero-grid-layer--base"></div>'
+        . '<div class="hero-grid-layer hero-grid-layer--reveal"></div>'
+        . '</div>';
+}
+
+/**
  * Enqueue Styles and Scripts
  */
+function tbi_asset_version($relative_path, $fallback = '1.0.0')
+{
+    $file = get_template_directory() . '/' . ltrim($relative_path, '/');
+    return file_exists($file) ? (string) filemtime($file) : $fallback;
+}
+
 function tbi_enqueue_assets()
 {
     // Styles
-    wp_enqueue_style('tbi-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
-    wp_enqueue_style('tbi-mockup-style', get_template_directory_uri() . '/assets/css/mockup-design.css', array('tbi-main-style'), '1.0.0');
-    wp_enqueue_style('tbi-services-style', get_template_directory_uri() . '/assets/css/services.css', array(), '1.0.0');
-    wp_enqueue_style('tbi-startups-style', get_template_directory_uri() . '/assets/css/incubated-startups.css', array(), '1.0.0');
-    wp_enqueue_style('tbi-ecell-style', get_template_directory_uri() . '/assets/css/ecell.css', array(), '1.0.0');
-    wp_enqueue_style('tbi-how-we-help-style', get_template_directory_uri() . '/assets/css/how-we-help.css', array('tbi-main-style'), '1.0.0');
-    wp_enqueue_style('tbi-profile-card-style', get_template_directory_uri() . '/assets/css/profile-card.css', array(), '1.0.0');
-    wp_enqueue_style('tbi-objectives-journey-style', get_template_directory_uri() . '/assets/css/objectives-journey.css', array('tbi-main-style'), '1.0.0');
-    wp_enqueue_style('tbi-navbar-style', get_template_directory_uri() . '/assets/css/navbar.css', array('tbi-main-style'), '1.2.0');
-    wp_enqueue_style('tbi-flowing-menu-style', get_template_directory_uri() . '/assets/css/FlowingMenu.css', array('tbi-navbar-style'), '1.0.0');
-    wp_enqueue_style('tbi-staggered-menu-style', get_template_directory_uri() . '/assets/css/StaggeredMenu.css', array('tbi-navbar-style'), '1.0.0');
-    wp_enqueue_style('tbi-drift-wall-style', get_template_directory_uri() . '/assets/css/DriftWall.css', array('tbi-main-style'), '1.0.0');
-    wp_enqueue_style('tbi-card-swap-style', get_template_directory_uri() . '/assets/css/CardSwap.css', array('tbi-main-style'), '1.0.0');
-    wp_enqueue_style('tbi-scroll-stack-style', get_template_directory_uri() . '/assets/css/scroll-stack.css', array('tbi-main-style'), '1.0.0');
+    wp_enqueue_style('tbi-main-style', get_template_directory_uri() . '/assets/css/style.css', array(), tbi_asset_version('assets/css/style.css'));
+    wp_enqueue_style('tbi-mockup-style', get_template_directory_uri() . '/assets/css/mockup-design.css', array('tbi-main-style'), tbi_asset_version('assets/css/mockup-design.css'));
+    wp_enqueue_style('tbi-services-style', get_template_directory_uri() . '/assets/css/services.css', array(), tbi_asset_version('assets/css/services.css'));
+    wp_enqueue_style('tbi-startups-style', get_template_directory_uri() . '/assets/css/incubated-startups.css', array(), tbi_asset_version('assets/css/incubated-startups.css'));
+    wp_enqueue_style('tbi-ecell-style', get_template_directory_uri() . '/assets/css/ecell.css', array(), tbi_asset_version('assets/css/ecell.css'));
+    wp_enqueue_style('tbi-how-we-help-style', get_template_directory_uri() . '/assets/css/how-we-help.css', array('tbi-main-style'), tbi_asset_version('assets/css/how-we-help.css'));
+    wp_enqueue_style('tbi-profile-card-style', get_template_directory_uri() . '/assets/css/profile-card.css', array(), tbi_asset_version('assets/css/profile-card.css'));
+    wp_enqueue_style('tbi-objectives-journey-style', get_template_directory_uri() . '/assets/css/objectives-journey.css', array('tbi-main-style'), tbi_asset_version('assets/css/objectives-journey.css'));
+    wp_enqueue_style('tbi-navbar-style', get_template_directory_uri() . '/assets/css/navbar.css', array('tbi-main-style'), tbi_asset_version('assets/css/navbar.css'));
+    wp_enqueue_style('tbi-flowing-menu-style', get_template_directory_uri() . '/assets/css/FlowingMenu.css', array('tbi-navbar-style'), tbi_asset_version('assets/css/FlowingMenu.css'));
+    wp_enqueue_style('tbi-staggered-menu-style', get_template_directory_uri() . '/assets/css/StaggeredMenu.css', array('tbi-navbar-style'), tbi_asset_version('assets/css/StaggeredMenu.css'));
+    wp_enqueue_style('tbi-drift-wall-style', get_template_directory_uri() . '/assets/css/DriftWall.css', array('tbi-main-style'), tbi_asset_version('assets/css/DriftWall.css'));
+    wp_enqueue_style('tbi-card-swap-style', get_template_directory_uri() . '/assets/css/CardSwap.css', array('tbi-main-style'), tbi_asset_version('assets/css/CardSwap.css'));
+    wp_enqueue_style('tbi-scroll-stack-style', get_template_directory_uri() . '/assets/css/scroll-stack.css', array('tbi-main-style'), tbi_asset_version('assets/css/scroll-stack.css'));
+    wp_enqueue_style('tbi-mentors-style', get_template_directory_uri() . '/assets/css/mentors.css', array('tbi-main-style'), tbi_asset_version('assets/css/mentors.css'));
     // Scripts
-    wp_enqueue_script('tbi-profile-card-script', get_template_directory_uri() . '/assets/js/profile-card.js', array(), '1.0.0', true);
-    wp_enqueue_script('tbi-how-we-help-script', get_template_directory_uri() . '/assets/js/how-we-help.js', array(), '1.0.0', true);
-    wp_enqueue_script('tbi-objectives-journey-script', get_template_directory_uri() . '/assets/js/objectives-journey.js', array(), '1.0.0', true);
-    wp_enqueue_script('tbi-navbar-script', get_template_directory_uri() . '/assets/js/navbar.js', array('gsap'), '1.2.0', true);
-    wp_enqueue_script('tbi-drift-wall-script', get_template_directory_uri() . '/assets/js/drift-wall.js', array(), '1.0.0', true);
-    wp_enqueue_script('tbi-card-swap-script', get_template_directory_uri() . '/assets/js/card-swap.js', array('gsap'), '1.0.0', true);
-    wp_enqueue_script('tbi-scroll-stack-script', get_template_directory_uri() . '/assets/js/ScrollStack.js', array(), '1.0.0', true);
+    wp_enqueue_script('tbi-profile-card-script', get_template_directory_uri() . '/assets/js/profile-card.js', array(), tbi_asset_version('assets/js/profile-card.js'), true);
+    wp_enqueue_script('tbi-how-we-help-script', get_template_directory_uri() . '/assets/js/how-we-help.js', array(), tbi_asset_version('assets/js/how-we-help.js'), true);
+    wp_enqueue_script('tbi-objectives-journey-script', get_template_directory_uri() . '/assets/js/objectives-journey.js', array(), tbi_asset_version('assets/js/objectives-journey.js'), true);
+    wp_enqueue_script('tbi-navbar-script', get_template_directory_uri() . '/assets/js/navbar.js', array('gsap'), tbi_asset_version('assets/js/navbar.js'), true);
+    wp_enqueue_script('tbi-drift-wall-script', get_template_directory_uri() . '/assets/js/drift-wall.js', array(), tbi_asset_version('assets/js/drift-wall.js'), true);
+    wp_localize_script('tbi-drift-wall-script', 'tbiThemeURI', array('root' => get_template_directory_uri()));
+    wp_enqueue_script('tbi-card-swap-script', get_template_directory_uri() . '/assets/js/card-swap.js', array('gsap'), tbi_asset_version('assets/js/card-swap.js'), true);
+    wp_enqueue_script('tbi-scroll-stack-script', get_template_directory_uri() . '/assets/js/ScrollStack.js', array(), tbi_asset_version('assets/js/ScrollStack.js'), true);
+    wp_enqueue_script('tbi-mentors-script', get_template_directory_uri() . '/assets/js/mentors.js', array(), tbi_asset_version('assets/js/mentors.js'), true);
 
-    // Fonts & Icons
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;600;700&display=swap', array(), null);
+    // Fonts & Icons (self-hosted)
+    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/vendor/font-awesome/css/all.min.css', array(), '6.4.0');
+    wp_enqueue_style('google-fonts', get_template_directory_uri() . '/assets/fonts/google-fonts.css', array(), tbi_asset_version('assets/fonts/google-fonts.css'));
 
     // Hero light CSS (home page hero + global light theme overrides for all pages)
-    wp_enqueue_style('tbi-hero-light', get_template_directory_uri() . '/assets/css/hero-light.css', array('tbi-main-style', 'tbi-navbar-style'), '1.0.1');
+    wp_enqueue_style('tbi-hero-light', get_template_directory_uri() . '/assets/css/hero-light.css', array('tbi-main-style', 'tbi-navbar-style'), tbi_asset_version('assets/css/hero-light.css'));
 
-    // Enqueue landing page styles & scripts ONLY on front page
-    if (is_front_page() || is_home()) {
-        // Front page specific — nothing extra needed
-    }
+    // Hero infinite grid (cursor-following reveal) — used on every page hero
+    wp_enqueue_script('tbi-hero-grid-script', get_template_directory_uri() . '/assets/js/hero-grid.js', array(), tbi_asset_version('assets/js/hero-grid.js'), true);
 
-
-
-    // Lucide Icons & GSAP and Lenis for all pages
-    wp_enqueue_script('lucide', 'https://unpkg.com/lucide@latest', array(), null, true);
-    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), '3.12.2', true);
-    wp_enqueue_script('gsap-flip', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js', array('gsap'), '3.12.2', true);
-    wp_enqueue_script('lenis', 'https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js', array(), '1.0.29', true);
+    // Lucide Icons & GSAP and Lenis for all pages (self-hosted)
+    wp_enqueue_script('lucide', get_template_directory_uri() . '/assets/vendor/js/lucide.min.js', array(), '0.454.0', true);
+    wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/vendor/js/gsap.min.js', array(), '3.12.2', true);
+    wp_enqueue_script('gsap-flip', get_template_directory_uri() . '/assets/vendor/js/Flip.min.js', array('gsap'), '3.12.2', true);
+    wp_enqueue_script('lenis', get_template_directory_uri() . '/assets/vendor/js/lenis.min.js', array(), '1.0.29', true);
 
     if (file_exists(get_template_directory() . '/assets/js/main.js')) {
         // Main script: depends on gsap, gsap-flip, lenis, lucide (ScrollTrigger removed)
-        wp_enqueue_script('tbi-main-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'gsap', 'gsap-flip', 'lenis', 'lucide'), '1.0.0', true);
+        wp_enqueue_script('tbi-main-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'gsap', 'gsap-flip', 'lenis', 'lucide'), tbi_asset_version('assets/js/main.js'), true);
     }
 }
 add_action('wp_enqueue_scripts', 'tbi_enqueue_assets');

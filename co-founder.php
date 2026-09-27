@@ -9,15 +9,18 @@ get_header();
 
 <!-- Editorial Page Header -->
 <div class="page-editorial-header">
-    <div class="peh-label">CO-FOUNDER SEARCH</div>
-    <h1 class="peh-heading">
-        DISCOVER YOUR <span class="ph-red">PERFECT</span><br>
-        CO-FOUNDER <span class="ph-red">MATCH</span>
-    </h1>
-    <p class="peh-desc">
-        Every great venture starts with the right partnership.<br>
-        <strong>Find a co-founder who shares your vision, complements your skills.</strong>
-    </p>
+    <?php tbi_hero_grid(); ?>
+    <div class="peh-inner">
+        <div class="peh-label">Co-Founder Search</div>
+        <h1 class="peh-heading">
+            Discover your <span class="ph-red">perfect</span>
+            co-founder <span class="ph-red">match</span>
+        </h1>
+        <p class="peh-desc">
+            Every great venture starts with the right partnership.<br>
+            <strong>Find a co-founder who shares your vision, complements your skills.</strong>
+        </p>
+    </div>
 </div>
 
 <!-- INTRO -->

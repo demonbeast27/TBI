@@ -9,7 +9,7 @@
         // 1. Scroll-Triggered Floating Pill Navbar
         // =========================================================================
         const siteHeader = document.getElementById('siteHeader');
-        const scrollThreshold = 70;
+        const scrollThreshold = 30;
         let ticking = false;
 
         function updateNavbar() {
@@ -138,6 +138,8 @@
             function playOpen() {
                 if (busy) return;
                 busy = true;
+                if (window.lenis) window.lenis.stop();
+                document.body.style.overflow = 'hidden';
                 const tl = buildOpenTimeline();
                 if (tl) {
                     tl.eventCallback('onComplete', () => { busy = false; });
@@ -150,6 +152,8 @@
             function playClose() {
                 openTl?.kill();
                 openTl = null;
+                if (window.lenis) window.lenis.start();
+                document.body.style.overflow = '';
                 
                 const all = [...preLayers, panel];
                 closeTween?.kill();

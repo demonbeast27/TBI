@@ -5,10 +5,15 @@
 (function() {
   'use strict';
 
+  const THEME_ROOT =
+    (typeof tbiThemeURI !== 'undefined' && tbiThemeURI && tbiThemeURI.root)
+      ? tbiThemeURI.root
+      : '/wp-content/themes/rbu-tbi/tbi-theme';
+
   const DEFAULT_ITEMS = Array.from({ length: 15 }, (_, i) => {
     const ids = [1015, 1025, 1039, 1043, 1044, 1050, 1062, 1069, 1074, 1080, 1084, 106, 110, 133, 164];
     return {
-      image: `https://picsum.photos/id/${ids[i % ids.length]}/600/400`,
+      image: `${THEME_ROOT}/assets/vendor/img/drift-wall/tile-${ids[i % ids.length]}.jpg`,
       title: `Tile ${i + 1}`,
       href: undefined
     };

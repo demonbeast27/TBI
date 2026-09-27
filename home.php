@@ -21,9 +21,8 @@ get_header();
         <div class="hero-light-text">
 
             <h1 class="hero-light-headline">
-                We create and incubate<br>
-                companies that are<br>
-                <span class="word-sustainable">sustainable</span>
+                We create, incubate,<br>
+                and <span class="word-sustainable">accelerate.</span>
             </h1>
 
             <!-- OUR ADVANTAGE block -->
@@ -58,62 +57,120 @@ get_header();
             <div class="hero-slider-fade hero-slider-fade-top" aria-hidden="true"></div>
 
             <div class="hero-slider-container" aria-label="Incubated startups slider">
-                <!-- Column 1: Scrolling Upwards -->
+                <!-- Column 1: Scrolling Upwards (11 startups) -->
                 <div class="hero-slider-col hero-slider-col-1">
                     <div class="hero-slider-track hero-slider-track-up">
                         <!-- Group 1 -->
                         <div class="hero-slider-group">
+                            <!-- 1. Happico India (Rocca) -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Michel</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/ROCCA.png" alt="Happico India (Rocca)" class="hero-card-logo">
                             </div>
+
+<!-- 3. Sigmatronics Innovations -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Ilark</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SIGMATRONICS.png" alt="Sigmatronics Innovations" class="hero-card-logo">
                             </div>
+
+<!-- 5. Empowrclub -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Same Ad</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EMPOWRCLUB.png" alt="Empowrclub" class="hero-card-logo">
+                            </div>
+                            <!-- 6. Shashtav Charging Bharat -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">Shashtav<br>Charging Bharat</span>
+                            </div>
+                            <!-- 7. Health COCO / Smiling Bird -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SMILEBIRD.png" alt="Health COCO / Smiling Bird" class="hero-card-logo">
+                            </div>
+                            <!-- 8. Easywire Technology -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EASYWIRE.png" alt="Easywire Technology" class="hero-card-logo">
+                            </div>
+                            <!-- 9. MechHelp -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/MECHHELP.png" alt="MechHelp" class="hero-card-logo">
+                            </div>
+                            <!-- 10. Prograssia (Sharun Innovations) -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PROGRESSIA.png" alt="Prograssia" class="hero-card-logo">
+                            </div>
+                            <!-- 11. HAWLT Technology -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/HAWLA.png" alt="HAWLT Technology" class="hero-card-logo">
                             </div>
                         </div>
                         <!-- Group 2 (Duplicate for seamless loop) -->
                         <div class="hero-slider-group" aria-hidden="true">
-                            <div class="hero-card">
-                                <span class="hero-card-name">Michel</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">Ilark</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">Same Ad</span>
-                            </div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/ROCCA.png" alt="Happico India (Rocca)" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SIGMATRONICS.png" alt="Sigmatronics Innovations" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EMPOWRCLUB.png" alt="Empowrclub" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">Shashtav<br>Charging Bharat</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SMILEBIRD.png" alt="Health COCO / Smiling Bird" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EASYWIRE.png" alt="Easywire Technology" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/MECHHELP.png" alt="MechHelp" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PROGRESSIA.png" alt="Prograssia" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/HAWLA.png" alt="HAWLT Technology" class="hero-card-logo"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Scrolling Downwards (Reverse) -->
+                <!-- Column 2: Scrolling Downwards (Reverse) — 11 startups -->
                 <div class="hero-slider-col hero-slider-col-2">
                     <div class="hero-slider-track hero-slider-track-down">
                         <!-- Group 1 -->
                         <div class="hero-slider-group">
+                            <!-- 12. Bio-Spectronics -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Michel<br>Woofers</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BIOSPECTRONICS.png" alt="Bio-Spectronics" class="hero-card-logo">
                             </div>
+                            <!-- 13. Parkby -->
                             <div class="hero-card">
-                                <span class="hero-card-name">R1Fer</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/tbi-photos/parkby.png" alt="Parkby" class="hero-card-logo">
                             </div>
+                            <!-- 14. Rihla Technologies (Yoo CAB) -->
                             <div class="hero-card">
-                                <span class="hero-card-name hero-card-options">and these<br>type of options</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/YOO CABS.png" alt="Rihla Technologies (Yoo CAB)" class="hero-card-logo">
+                            </div>
+                            <!-- 15. DVSLA Technologies -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">DVSLA<br>Technologies</span>
+                            </div>
+                            <!-- 16. Wooferzz Innovations -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/WOOFERZZ.png" alt="Wooferzz Innovations" class="hero-card-logo">
+                            </div>
+
+<!-- 18. BeRAM -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BERAM.png" alt="BeRAM" class="hero-card-logo">
+                            </div>
+                            <!-- 19. Wise-Besarv -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">Wise-Besarv</span>
+                            </div>
+                            <!-- 20. Pbridge Consultancy -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PBRIDGE.png" alt="Pbridge Consultancy" class="hero-card-logo">
+                            </div>
+
+<!-- 22. Cupda Project -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/Cupda Project.png" alt="Cupda Project" class="hero-card-logo">
                             </div>
                         </div>
                         <!-- Group 2 (Duplicate for seamless loop) -->
                         <div class="hero-slider-group" aria-hidden="true">
-                            <div class="hero-card">
-                                <span class="hero-card-name">Michel<br>Woofers</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">R1Fer</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name hero-card-options">and these<br>type of options</span>
-                            </div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BIOSPECTRONICS.png" alt="Bio-Spectronics" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/tbi-photos/parkby.png" alt="Parkby" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/YOO CABS.png" alt="Rihla Technologies (Yoo CAB)" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">DVSLA<br>Technologies</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/WOOFERZZ.png" alt="Wooferzz Innovations" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BERAM.png" alt="BeRAM" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">Wise-Besarv</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PBRIDGE.png" alt="Pbridge Consultancy" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/Cupda Project.png" alt="Cupda Project" class="hero-card-logo"></div>
                         </div>
                     </div>
                 </div>
@@ -137,7 +194,7 @@ get_header();
             </p>
             <div class="video-wrap">
                 <video style="width:100%;height:auto;display:block;"
-                    src="http://rcoemtbi.org/wp-content/uploads/2024/12/tbiVideo.mp4"
+                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/video/tbiVideo.mp4' ); ?>"
                     autoplay loop muted playsinline controlslist="nodownload"
                     aria-label="RBU TBI Growth and Impact Video"></video>
             </div>
@@ -172,7 +229,6 @@ get_header();
 
         <!-- Section Header (Centered) -->
         <div class="objectives-header-center">
-            <span class="objectives-eyebrow">WHAT WE DO</span>
             <h2 class="objectives-title">Our Objectives</h2>
             <p class="objectives-subtext">How RCOEM TBI drives innovation, growth, and impact across the startup ecosystem.</p>
         </div>
@@ -280,8 +336,10 @@ get_header();
     </div><!-- /.objectives-container -->
 </section>
 
-<!-- Final CTA (Cloudflare Style Banner) -->
-<section style="padding:80px 0;background:#f7f7f5;position:relative;z-index:10;overflow:hidden;">
+<!-- ══════════════════════════════════════════════════════════════════════════
+     FINAL CTA BANNER
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section style="padding:80px 0;background:#ffffff;position:relative;z-index:10;overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
         <div class="cloudflare-cta-banner" style="border-radius:2.5rem;padding:80px 60px;text-align:center;background:linear-gradient(145deg,#1E40AF 0%,#2563EB 100%);box-shadow:0 25px 60px -15px rgba(37,99,235,0.40),inset 0 1px 1px rgba(255,255,255,0.35);overflow:hidden;position:relative;">
 

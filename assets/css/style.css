@@ -1,5 +1,5 @@
-/* Google Fonts - Playfair Display (hero serif) + Poppins + Oswald */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+/* Self-hosted Google Fonts - Playfair Display (hero serif) + Poppins + Oswald */
+@import url('../fonts/google-fonts.css');
 
 :root {
     --primary-color: #0057B0;
@@ -458,7 +458,7 @@ ul {
     height: 100vh;
     width: 100%;
     /* Using the provided building image with a translucent blue overlay */
-    background: linear-gradient(rgba(9, 52, 99, 0.85), rgba(9, 52, 99, 0.85)), url('tbi-building.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(9, 52, 99, 0.85), rgba(9, 52, 99, 0.85)), url('../images/tbi banner.jpeg') no-repeat center center/cover;
     background-color: #061c38;
     /* Fallback */
     display: flex;
@@ -778,16 +778,166 @@ ul {
 }
 
 .footer-links li {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 .footer-links a {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 3px 0;
 }
 
 .footer-links a:hover {
     color: white;
+}
+
+@media (max-width: 640px) {
+    .footer-links a {
+        padding: 8px 0;
+    }
+    .footer-links li {
+        margin-bottom: 2px;
+    }
+}
+
+/* Quick Links: 11 items flow down column 1 (6) then column 2 (5) */
+.footer-col-links {
+    flex: 1 1 260px;
+    padding-left: 20px;
+}
+.footer-links-split {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    column-gap: 28px;
+    row-gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links-split li {
+    margin-bottom: 0;
+    padding: 3px 0;
+}
+
+@media (max-width: 640px) {
+
+    .footer-col-links {
+        flex: 1 1 100%;
+        padding-left: 0;
+    }
+
+    .footer-links-split {
+        column-gap: 20px;
+    }
+
+    .footer-links-split li {
+        padding: 6px 0;
+    }
+}
+
+/* --- Impact stats row (startups.php) --- */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.stats-row__item {
+    padding: 48px 36px;
+    text-align: center;
+    border-right: 1px solid #e2e8f0;
+    min-width: 0;
+}
+
+.stats-row__item:last-child {
+    border-right: 0;
+}
+
+.stats-row__value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.stats-row__unit {
+    color: #0057B0;
+}
+
+.stats-row__unit--sm {
+    font-size: 2rem;
+}
+
+.stats-row__label {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+
+/* Tablet: 2-up, third stat spans full width */
+@media (max-width: 900px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-row__item {
+        padding: 36px 24px;
+    }
+
+    .stats-row__item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .stats-row__item:nth-child(3) {
+        grid-column: 1 / -1;
+        border-top: 1px solid #e2e8f0;
+    }
+}
+
+/* Mobile: stack all three */
+@media (max-width: 600px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-row__item {
+        padding: 28px 20px;
+        border-right: 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .stats-row__item:nth-child(3) {
+        border-top: 0;
+    }
+
+    .stats-row__item:last-child {
+        border-bottom: 0;
+    }
+
+    .stats-row__value {
+        font-size: 2.5rem;
+    }
+
+    .stats-row__unit--sm {
+        font-size: 1.5rem;
+    }
+
+    .stats-row__label {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+    }
 }
 
 .contact-list li {
@@ -801,6 +951,48 @@ ul {
 
 .contact-list i {
     margin-top: 3px;
+}
+
+/* --- Mail Us CTA (footer col 1) --- */
+.footer-mail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 18px;
+    min-height: 44px;
+    background: #0d5ea6;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.footer-mail-link:hover,
+.footer-mail-link:focus {
+    background: #0a4c88;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.footer-mail-link i {
+    font-size: 15px;
+}
+
+/* Clickable email / phone in the Contact column */
+.footer-contact-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -1163,7 +1355,7 @@ ul {
     padding: 100px 0 60px;
     text-align: center;
     /* Consistent masked background style */
-    background: linear-gradient(rgba(9, 52, 99, 0.85), rgba(9, 52, 99, 0.85)), url('tbi-building.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(9, 52, 99, 0.85), rgba(9, 52, 99, 0.85)), url('../images/tbi banner.jpeg') no-repeat center center/cover;
     color: white;
 }
 
@@ -1367,8 +1559,24 @@ ul {
     }
 }
 
-/* ================= CLOUDFLARE STYLE CTA BANNER ================= */
-.cloudflare-cta-banner {
+/* ============================================================
+   HERO INFINITE GRID — layering
+   The grid (.hero-infinite-grid) is absolutely positioned at z-index:0
+   inside the hero. Every hero's content wrapper must therefore be
+   position:relative + z-index:1, otherwise the grid paints OVER the text
+   (positioned elements paint above static in-flow content).
+   ============================================================ */
+.page-editorial-header > .peh-inner,
+.svc-page-header > .svc-inner,
+.about-hero-section > .about-hero-container,
+.tbi-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   CLOUDFLARE STYLE CTA BANNER
+   ============================================================ */.cloudflare-cta-banner {
     position: relative;
     background: linear-gradient(145deg, #1E40AF 0%, #2563EB 100%);
     box-shadow: 0 25px 60px -15px rgba(37, 99, 235, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
@@ -1396,6 +1604,152 @@ ul {
     background: radial-gradient(ellipse 65% 100% at 50% 100%, rgba(191, 219, 254, 0.75) 0%, rgba(96, 165, 250, 0.4) 40%, rgba(30, 64, 175, 0) 80%);
     filter: blur(18px);
     pointer-events: none;
+}
+
+/* --- Final CTA banner (front page) --- */
+.cta-banner-section {
+    padding: 80px 0;
+    background: var(--lt-bg, #FFFFFF);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.cta-banner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.cloudflare-cta-banner {
+    border-radius: 2rem;
+    padding: 72px 56px;
+    text-align: center;
+}
+
+.cta-banner-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    /* floor dropped to 1.75rem: the old 2.5rem floor overflowed below ~360px */
+    font-size: clamp(1.75rem, 5vw, 4.5rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+}
+
+.cta-banner-text {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 1.1rem + 0.6vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.90);
+    line-height: 1.7;
+    margin: 0 auto 40px;
+    max-width: 700px;
+}
+
+.cta-banner-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.cta-btn--primary {
+    padding: 13px 34px;
+    background: #fff;
+    color: #1A1A2E;
+    font-weight: 700;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn--ghost {
+    padding: 13px 28px;
+    background: rgba(255, 255, 255, 0.20);
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.cta-btn--primary:hover,
+.cta-btn--primary:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+}
+
+.cta-btn--ghost:hover,
+.cta-btn--ghost:focus {
+    background: rgba(255, 255, 255, 0.32);
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .cta-banner-wrap {
+        padding: 0 32px;
+    }
+
+    .cloudflare-cta-banner {
+        padding: 56px 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cta-banner-section {
+        padding: 48px 0;
+    }
+
+    .cta-banner-wrap {
+        padding: 0 16px;
+    }
+
+    .cloudflare-cta-banner {
+        border-radius: 1.5rem;
+        padding: 40px 22px;
+    }
+
+    .cta-banner-text {
+        margin-bottom: 28px;
+    }
+
+    /* full-width stacked buttons read better than two cramped pills */
+    .cta-banner-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .cta-banner-wrap {
+        padding: 0 12px;
+    }
+
+    .cloudflare-cta-banner {
+        padding: 32px 16px;
+    }
 }
 
 .cf-floating-badge {

@@ -11,16 +11,19 @@ get_header();
 
 <!-- Editorial Page Header -->
 <div class="page-editorial-header">
-    <div class="peh-label">E-CELL COMMITTEE</div>
-    <h1 class="peh-heading">
-        FOSTERING <span class="ph-red">INNOVATION</span><br>
-        &amp; <span class="ph-red">ENTREPRENEURSHIP</span><br>
-        AMONG STUDENTS
-    </h1>
-    <p class="peh-desc">
-        E-Cell empowers students through mentorship, workshops, and collaborative events.<br>
-        <strong>Equipping aspiring entrepreneurs with tools, resources, and networks.</strong>
-    </p>
+    <?php tbi_hero_grid(); ?>
+    <div class="peh-inner">
+        <div class="peh-label">E-Cell Committee</div>
+        <h1 class="peh-heading">
+            Fostering <span class="ph-red">innovation</span>
+            &amp; <span class="ph-red">entrepreneurship</span>
+            among students
+        </h1>
+        <p class="peh-desc">
+            E-Cell empowers students through mentorship, workshops, and collaborative events.<br>
+            <strong>Equipping aspiring entrepreneurs with tools, resources, and networks.</strong>
+        </p>
+    </div>
 </div>
 
 <!-- Mission & Vision -->
@@ -45,8 +48,7 @@ get_header();
     </div>
 
     <div class="right-section">
-        <!-- Videos are currently missing from the project, but path structure is updated assuming they will be in assets/images/videos or similar. For now pointing to assets/images/ for consistency if user uploads them there. -->
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/ecell.mp4" autoplay muted loop></video>
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/video/mainecell.mp4" autoplay muted loop playsinline></video>
     </div>
 
 </div>
@@ -66,7 +68,7 @@ $core_committee = array(
         'handle' => 'ved_tidke',
         'status' => 'President',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/ved tidke.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/ved-tidkke-988585334/'
     ),
     array(
         'name' => 'Chetan Lahoti',
@@ -74,7 +76,15 @@ $core_committee = array(
         'handle' => 'chetan_lahoti',
         'status' => 'General Secretary',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/chetan lahoti.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/chetan-lahoti-a88779320?utm_source=share_via&utm_content=profile&utm_medium=member_android'
+    ),
+    array(
+        'name'    => 'Anika Agarwal',
+        'title'   => 'Treasurer',
+        'handle'  => 'anika_agarwal',
+        'status'  => 'Treasurer',
+        'image'   => 'ECELL COMMITTEE-20260905T095545Z-1-001/anika agarwal.jpg',
+        'contact' => 'https://www.linkedin.com/in/anika-agarwal-46171b374/'
     ),
     array(
         'name' => 'Vismay Shende',
@@ -82,7 +92,7 @@ $core_committee = array(
         'handle' => 'vismay_shende',
         'status' => 'Media Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/vismay shende.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/vismay-shende-3945a2365?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     ),
     array(
         'name' => 'Vedika Jain',
@@ -90,7 +100,7 @@ $core_committee = array(
         'handle' => 'vedika_jain',
         'status' => 'Media Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/vedika jain.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/vedika-jain-b1a089369?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     ),
     array(
         'name' => 'Tilak Sorte',
@@ -98,7 +108,7 @@ $core_committee = array(
         'handle' => 'tilak_sorte',
         'status' => 'Design Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/tilak sorte.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/tilak-sorte-223ab1335/'
     ),
     array(
         'name' => 'Saksham Boldhan',
@@ -106,7 +116,7 @@ $core_committee = array(
         'handle' => 'saksham_boldhan',
         'status' => 'Tech Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/saksham boldhan.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/feed/foryou/'
     ),
     array(
         'name' => 'Aarryan Parakh',
@@ -114,7 +124,7 @@ $core_committee = array(
         'handle' => 'aarryan_parakh',
         'status' => 'Vice President',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/aarryan parakh.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/aarryan-parakh-4a3857324/'
     ),
     array(
         'name' => 'Bhumika Reddy',
@@ -122,7 +132,7 @@ $core_committee = array(
         'handle' => 'bhumika_reddy',
         'status' => 'Sponsorship Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/bhumika reddy.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/ch-bhumika-reddy-0182ba333?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
     array(
         'name' => 'Rishi Palod',
@@ -130,7 +140,7 @@ $core_committee = array(
         'handle' => 'rishi_palod',
         'status' => 'Events Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/rishi palod.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/rishi-palod-295b62282?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
     array(
         'name' => 'Devansh Lakhotia',
@@ -138,7 +148,7 @@ $core_committee = array(
         'handle' => 'devansh_lakhotia',
         'status' => 'Finance Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/devansh lakhotia.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/devansh-lakhotia-a2a31130b?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     ),
     array(
         'name' => 'Shubh Surana',
@@ -146,7 +156,7 @@ $core_committee = array(
         'handle' => 'shubh_surana',
         'status' => 'Treasurer',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/shubh surana.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/shubh-surana-b9772a324?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
     array(
         'name' => 'Shashwat Sinha',
@@ -154,7 +164,7 @@ $core_committee = array(
         'handle' => 'shashwat_sinha',
         'status' => 'Marketing Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/shashwat sinha.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/shashwat-sinha-655334251?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
     array(
         'name' => 'Pragnya Mogalla',
@@ -162,7 +172,7 @@ $core_committee = array(
         'handle' => 'pragnya_mogalla',
         'status' => 'Content Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/pragnya mogalla.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/pragnya-mogalla-1840b62b4?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
     array(
         'name' => 'Kripa Tawri',
@@ -170,13 +180,14 @@ $core_committee = array(
         'handle' => 'kripa_tawri',
         'status' => 'Operations Incharge',
         'image' => 'ECELL COMMITTEE-20260905T095545Z-1-001/kripa tawri.jpg',
-        'contact' => 'Connect'
+        'contact' => 'https://www.linkedin.com/in/kripa-tawri-24a283309?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     ),
 );
 ?>
 
-<div class="pc-grid">
-    <?php foreach ($core_committee as $member) : ?>
+<div class="committee-container" style="max-width: 1240px; margin: 30px auto 60px; padding: 0 20px; position: relative;">
+    <div class="pc-grid">
+        <?php foreach ($core_committee as $member) : ?>
         <div class="pc-card-wrapper">
             <div class="pc-behind"></div>
             <div class="pc-card-shell">
@@ -186,12 +197,17 @@ $core_committee = array(
                          alt="<?php echo esc_attr($member['name']); ?>"
                          loading="lazy">
                     <div class="pc-card-footer">
-                        <a href="mailto:info@rcoemtbi.org" class="pc-connect-btn" aria-label="Connect with <?php echo esc_attr($member['name']); ?>">Connect</a>
+                        <?php if ($member['contact'] !== 'Connect'): ?>
+                            <a href="<?php echo esc_url($member['contact']); ?>" target="_blank" rel="noopener noreferrer" class="pc-connect-btn" aria-label="Connect with <?php echo esc_attr($member['name']); ?>">Connect</a>
+                        <?php else: ?>
+                            <a href="mailto:info@rcoemtbi.org" class="pc-connect-btn" aria-label="Connect with <?php echo esc_attr($member['name']); ?>">Connect</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
 </div>
 
 <!-- Recently Organized -->
@@ -202,7 +218,7 @@ $core_committee = array(
 <!-- Transpreneur Event -->
 <div class="ecell-container">
     <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/T1.mp4" autoplay muted loop></video>
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/IMG_6560.MOV" autoplay muted loop playsinline></video>
     </div>
     <div class="left-section">
         <div class="upper">
@@ -214,15 +230,15 @@ $core_committee = array(
         </div>
         <div class="lower"></div> <!-- Spacer/Visual balance -->
     </div>
-    <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/T2.mp4" autoplay muted loop></video>
+    <div class="right-section right-section--dupe">
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/IMG_6560.MOV" autoplay muted loop playsinline></video>
     </div>
 </div>
 
 <!-- Ideathon Event -->
 <div class="ecell-container">
     <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/I1.mp4" autoplay muted loop></video>
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/video/idea.mp4" autoplay muted loop playsinline></video>
     </div>
     <div class="left-section">
         <div class="upper">
@@ -233,15 +249,15 @@ $core_committee = array(
         </div>
         <div class="lower"></div>
     </div>
-    <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/I2.mp4" autoplay muted loop></video>
+    <div class="right-section right-section--dupe">
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/video/idea.mp4" autoplay muted loop playsinline></video>
     </div>
 </div>
 
 <!-- Venture Vault Event -->
 <div class="ecell-container">
     <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/I4.mp4" autoplay muted loop></video>
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/final trailer.mp4" autoplay muted loop playsinline></video>
     </div>
     <div class="left-section">
         <div class="upper">
@@ -251,8 +267,25 @@ $core_committee = array(
         </div>
         <div class="lower"></div>
     </div>
+    <div class="right-section right-section--dupe">
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/final trailer.mp4" autoplay muted loop playsinline></video>
+    </div>
+</div>
+
+<!-- Founder Room Event -->
+<div class="ecell-container">
     <div class="right-section">
-        <video src="<?php echo get_template_directory_uri(); ?>/assets/images/I3.mp4" autoplay muted loop></video>
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/video/founder.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="left-section">
+        <div class="upper">
+            <h1>Founder Room</h1>
+            <p>Founder’s Room is an entrepreneurship event by E-Cell RBU in collaboration with RCOEM TBI, where startup founders share their real entrepreneurial journeys, challenges, failures, and key learnings. The event provides students with practical insights into startups, innovation, leadership, and building ideas into impactful ventures.</p>
+        </div>
+        <div class="lower"></div>
+    </div>
+    <div class="right-section right-section--dupe">
+        <video src="<?php echo get_template_directory_uri(); ?>/assets/video/founder.mp4" autoplay muted loop playsinline></video>
     </div>
 </div>
 
@@ -262,7 +295,7 @@ $core_committee = array(
 </section>
 
 <div class="photo-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/grp.jpg" alt="E-Cell Family Group Photo">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ecell%20fam.jpeg" alt="E-Cell Family Group Photo">
 </div>
 
 <?php

@@ -34,6 +34,7 @@ body {
     color: var(--red);
     margin-bottom: 20px;
 }
+
 .section-label::before {
     content: '';
     display: block;
@@ -66,28 +67,33 @@ body {
 :root {
     --framer-radius-lg: 24px;
     --framer-radius-md: 16px;
-    --framer-shadow: 0 10px 40px -10px rgba(0,0,0,0.12);
-    --framer-border: 1px solid rgba(0,0,0,0.08);
+    --framer-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.12);
+    --framer-border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* --- Accent Card (Mission & Objective / Framer-style) --- */
 .accent-card {
     background: #ffffff;
-    border-radius: 16px; /* rounded-2xl */
+    border-radius: 16px;
+    /* rounded-2xl */
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-top: 4px solid var(--red, #0057B0);
-    padding: clamp(24px, 3.5vw, 32px); /* p-6 md:p-8 */
+    padding: clamp(24px, 3.5vw, 32px);
+    /* p-6 md:p-8 */
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
+
 .accent-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.1);
     border-color: rgba(0, 0, 0, 0.14);
 }
+
 .accent-card .card-label {
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 0.82rem; /* text-xs md:text-sm */
+    font-size: 0.82rem;
+    /* text-xs md:text-sm */
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--red, #0057B0);
@@ -95,11 +101,15 @@ body {
     font-weight: 700;
     display: inline-block;
 }
+
 .accent-card p {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-size: clamp(1.02rem, 1.25vw, 1.125rem) !important; /* text-base md:text-lg */
-    color: #374151 !important; /* text-gray-700 */
-    line-height: 1.625 !important; /* leading-relaxed / leading-7 */
+    font-size: clamp(1.02rem, 1.25vw, 1.125rem) !important;
+    /* text-base md:text-lg */
+    color: #374151 !important;
+    /* text-gray-700 */
+    line-height: 1.625 !important;
+    /* leading-relaxed / leading-7 */
     margin: 0 !important;
 }
 
@@ -111,6 +121,7 @@ a[href^="mailto:"] {
     border-radius: 9999px !important;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
 }
+
 a[href*="docs.google.com"]:hover,
 a[href*="wp-content/uploads"]:hover,
 a[href*="forms.gle"]:hover,
@@ -125,6 +136,7 @@ a[href^="mailto:"]:hover {
     grid-template-columns: 1fr 1fr;
     gap: 0;
 }
+
 .numbered-item {
     display: flex;
     align-items: flex-start;
@@ -132,13 +144,16 @@ a[href^="mailto:"]:hover {
     padding: 24px 0;
     border-bottom: var(--framer-border);
 }
+
 .numbered-item:nth-child(odd) {
     padding-right: 40px;
 }
+
 .numbered-item:nth-child(even) {
     padding-left: 40px;
     border-left: var(--framer-border);
 }
+
 .num-badge {
     font-size: 1.1rem;
     font-weight: 800;
@@ -147,6 +162,7 @@ a[href^="mailto:"]:hover {
     min-width: 36px;
     flex-shrink: 0;
 }
+
 .num-content h4 {
     font-family: 'Inter', -apple-system, sans-serif !important;
     font-size: 1.08rem !important;
@@ -154,6 +170,7 @@ a[href^="mailto:"]:hover {
     color: var(--black, #0f172a);
     margin-bottom: 4px;
 }
+
 .num-content p {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     font-size: 0.95rem !important;
@@ -166,6 +183,7 @@ a[href^="mailto:"]:hover {
     position: relative;
     height: 380px;
 }
+
 .staggered-images .img-front {
     position: absolute;
     top: 0;
@@ -177,6 +195,7 @@ a[href^="mailto:"]:hover {
     border-radius: var(--framer-radius-lg);
     box-shadow: var(--framer-shadow);
 }
+
 .staggered-images .img-back {
     position: absolute;
     bottom: 0;
@@ -187,12 +206,16 @@ a[href^="mailto:"]:hover {
     z-index: 1;
     border-radius: var(--framer-radius-lg);
 }
+
 img {
     border-radius: var(--framer-radius-md);
 }
+
 .hero img {
-    border-radius: 0; /* exception for full-width heroes */
+    border-radius: 0;
+    /* exception for full-width heroes */
 }
+
 .img-label {
     font-family: var(--mono);
     font-size: 0.72rem;
@@ -209,6 +232,7 @@ img {
     gap: 8px;
     overflow: hidden;
 }
+
 .hover-expand-gallery .gallery-item {
     flex: 1;
     position: relative;
@@ -217,19 +241,24 @@ img {
     border-radius: var(--framer-radius-md);
     cursor: pointer;
 }
+
 .hover-expand-gallery .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
-    border-radius: 0; /* Let the container handle border-radius */
+    border-radius: 0;
+    /* Let the container handle border-radius */
 }
+
 .hover-expand-gallery .gallery-item:hover {
     flex: 4;
 }
+
 .hover-expand-gallery .gallery-item:hover img {
     transform: scale(1.05);
 }
+
 .hover-expand-gallery .gallery-title {
     position: absolute;
     bottom: 20px;
@@ -243,19 +272,24 @@ img {
     pointer-events: none;
     z-index: 10;
 }
+
 .hover-expand-gallery .gallery-item:hover .gallery-title {
     opacity: 1;
     transform: translateY(0);
 }
+
 .hover-expand-gallery .gallery-overlay {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     z-index: 5;
     opacity: 0;
     transition: opacity 0.4s ease;
 }
+
 .hover-expand-gallery .gallery-item:hover .gallery-overlay {
     opacity: 1;
 }
@@ -266,6 +300,7 @@ img {
     max-width: 1300px;
     margin: 0 auto;
 }
+
 .page-section-full {
     padding: 100px 7%;
 }
@@ -277,6 +312,7 @@ img {
     gap: 80px;
     align-items: start;
 }
+
 .split-layout.gap-lg {
     gap: 100px;
 }
@@ -287,6 +323,7 @@ img {
     padding: 0;
     margin: 0;
 }
+
 .bullet-list li {
     font-family: var(--mono);
     font-size: 0.82rem;
@@ -297,6 +334,7 @@ img {
     align-items: center;
     gap: 10px;
 }
+
 .bullet-list li::before {
     content: '→';
     color: var(--red);
@@ -309,6 +347,7 @@ img {
     height: 320px;
     margin-top: 30px;
 }
+
 .coe-image-grid .coe-img-a {
     position: absolute;
     top: 0;
@@ -318,6 +357,7 @@ img {
     object-fit: cover;
     z-index: 2;
 }
+
 .coe-image-grid .coe-img-b {
     position: absolute;
     bottom: 0;
@@ -330,90 +370,199 @@ img {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .split-layout, .numbered-grid {
+
+    .split-layout,
+    .numbered-grid {
         grid-template-columns: 1fr;
     }
+
     .numbered-item:nth-child(even) {
         padding-left: 0;
         border-left: none;
     }
-    .staggered-images, .coe-image-grid {
+
+    .staggered-images,
+    .coe-image-grid {
         height: 240px;
     }
 }
 
 /* ================================================================
-   EDITORIAL PAGE HEADER — Reusable across ALL inner pages
-   Structure: [boxed label] + big heading (black + inline .ph-red) + mono desc
-================================================================ */
-
-/* ================================================================
-   EDITORIAL PAGE HEADER — Reusable across ALL inner pages
-   Structure: [boxed label] + big heading (black + inline .ph-red) + mono desc
+   EDITORIAL PAGE HEADER — Unified About-style hero across ALL inner pages
+   Pattern: white bg | Playfair serif headline | yellow highlight | Inter subtext
 ================================================================ */
 
 .page-editorial-header {
-    padding: clamp(112px, 10vw, 130px) 7% 70px;
-    background: #f8fafc;
+    background-color: #FFFFFF;
+    padding-top: clamp(84px, 7.5vw, 104px);
+    padding-bottom: clamp(64px, 8vw, 96px);
+    padding-left: clamp(20px, 4vw, 32px);
+    padding-right: clamp(20px, 4vw, 32px);
     text-align: center;
+    position: relative;
+    box-sizing: border-box;
 }
 
-/* Boxed bracket label */
-.peh-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--red);
-    border: 1.5px solid var(--red);
-    padding: 6px 18px;
-    margin-bottom: 36px;
-    background: rgba(0, 87, 176, 0.05);
-}
-
-/* Main heading */
-.peh-heading {
-    font-size: clamp(2.6rem, 7vw, 5rem);
-    font-weight: 900;
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    margin: 0 auto 32px;
-    max-width: 1000px;
-    color: #0f172a;
-}
-
-/* Inline red accent words */
-.peh-heading .ph-red {
-    color: var(--red);
-}
-
-/* Monospace description */
-.peh-desc {
-    font-family: var(--mono);
-    font-size: 0.85rem;
-    color: #64748b;
-    line-height: 1.9;
-    max-width: 680px;
+.peh-inner {
+    max-width: 1040px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Small eyebrow label above the headline */
+.peh-label {
+    display: inline-block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 24px;
+}
+
+/* Main serif headline */
+.peh-heading {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 400 !important;
+    font-size: clamp(2.3rem, 5.2vw, 4.4rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+    color: #1A1A2E !important;
+    max-width: 960px;
+    margin: 0 auto !important;
+    text-transform: none !important;
+}
+
+/* Yellow highlight on accent words — matches About's .about-hero-highlight */
+.peh-heading .ph-yellow {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    background-color: #F5D716 !important;
+    color: #1A1A2E !important;
+    padding: 2px 10px 4px !important;
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
+    display: inline !important;
+}
+
+/* Keep legacy .ph-red as alias for .ph-yellow for backward compat */
+.peh-heading .ph-red {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    background-color: #F5D716 !important;
+    color: #1A1A2E !important;
+    padding: 2px 10px 4px !important;
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
+    display: inline !important;
+}
+
+/* Subtext description — matches About's .about-hero-desc */
+.peh-desc {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(1.05rem, 1.3vw, 1.18rem) !important;
+    font-weight: 400 !important;
+    color: #4B5563 !important;
+    line-height: 1.7 !important;
+    max-width: 680px;
+    margin: 28px auto 0 !important;
+    text-align: center !important;
 }
 
 .peh-desc strong {
-    color: #0f172a;
+    color: #1A1A2E !important;
+    font-weight: 600;
 }
 
-/* Services page aliases (backward compat) */
-.svc-page-header        { padding: 100px 7% 70px; background: #f8fafc; text-align: center; }
-.svc-bracket-label      { display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--red); border:1.5px solid var(--red); padding:6px 16px; margin-bottom:36px; background: rgba(0,87,176,0.05); }
-.svc-bracket            { font-size:1rem; font-weight:700; line-height:1; }
-.svc-bracket-text       { letter-spacing:0.22em; }
-.svc-main-heading       { font-size:clamp(2.4rem,6vw,4.2rem); font-weight:900; line-height:1.05; letter-spacing:-0.02em; margin:0 auto 32px; max-width:900px; }
-.svc-heading-black      { display:block; color:#0f172a; }
-.svc-heading-red        { display:block; color:var(--red); }
-.svc-header-desc        { font-family:var(--mono); font-size:0.85rem; color:#64748b; line-height:1.9; max-width:680px; margin:0 auto; }
-.svc-header-desc strong { color:#0f172a; }
+/* ----------------------------------------------------------------
+   Services page header — alias of the same About pattern
+---------------------------------------------------------------- */
+.svc-page-header {
+    background-color: #FFFFFF;
+    padding-top: clamp(84px, 7.5vw, 104px);
+    padding-bottom: clamp(64px, 8vw, 96px);
+    padding-left: clamp(20px, 4vw, 32px);
+    padding-right: clamp(20px, 4vw, 32px);
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.svc-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svc-bracket-label {
+    display: inline-block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 24px;
+}
+
+/* Hide legacy bracket characters */
+.svc-bracket {
+    display: none;
+}
+
+.svc-bracket-text {
+    letter-spacing: 0.16em;
+}
+
+.svc-main-heading {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    font-weight: 400 !important;
+    font-size: clamp(2.3rem, 5.2vw, 4.4rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+    color: #1A1A2E !important;
+    max-width: 960px;
+    margin: 0 auto !important;
+    text-transform: none !important;
+}
+
+.svc-heading-black {
+    display: inline;
+    color: #1A1A2E;
+}
+
+/* Yellow highlight for services — same as peh-heading .ph-yellow */
+.svc-heading-red {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    background-color: #F5D716 !important;
+    color: #1A1A2E !important;
+    padding: 2px 10px 4px !important;
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
+    display: inline !important;
+}
+
+.svc-header-desc {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(1.05rem, 1.3vw, 1.18rem) !important;
+    font-weight: 400 !important;
+    color: #4B5563 !important;
+    line-height: 1.7 !important;
+    max-width: 680px;
+    margin: 28px auto 0 !important;
+    text-align: center !important;
+}
+
+.svc-header-desc strong {
+    color: #1A1A2E !important;
+    font-weight: 600;
+}
 
 /* Global light-mode helpers for inline elements */
 hr {
@@ -432,19 +581,29 @@ div[style*="background: #ffffff"] {
     background: #ffffff !important;
 }
 
-/* Responsive */
+/* Responsive — mirrors About section's mobile pattern */
 @media (max-width: 768px) {
+
     .page-editorial-header,
     .svc-page-header {
-        padding: 70px 6% 50px;
+        padding-top: 76px;
+        padding-bottom: 56px;
     }
+
     .peh-heading,
     .svc-main-heading {
-        font-size: clamp(2rem, 8vw, 2.8rem);
+        font-size: clamp(2rem, 7vw, 2.8rem) !important;
     }
+
+    .peh-desc,
+    .svc-header-desc {
+        margin-top: 20px !important;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
     .peh-desc br,
     .svc-header-desc br {
-        display: none;
+        display: inline;
     }
 }
-

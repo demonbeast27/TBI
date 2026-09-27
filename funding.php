@@ -8,91 +8,149 @@ get_header();
 ?>
 
 <!-- Editorial Page Header -->
-<div class="page-editorial-header">
-    <div class="peh-label">FUNDING</div>
-    <h1 class="peh-heading">
-        INVESTOR <span class="ph-red">CONNECT</span><br>
-        &amp; <span class="ph-red">GRANT</span> FACILITATION
-    </h1>
-    <p class="peh-desc">
-        Connecting startups with the right capital, at the right time.<br>
-        <strong>From angel investors to government grants — we open the doors.</strong>
-    </p>
+<section
+    style="background:#FFFFFF; padding: clamp(100px,10vw,130px) clamp(20px,5vw,64px) clamp(60px,7vw,100px); text-align:center; position:relative;">
+        <?php tbi_hero_grid(); ?>
+        <div class="tbi-hero-content" style="max-width:900px; margin:0 auto;">
+        <!-- Yellow "Funding" label pill -->
+        <div style="margin-bottom:24px;">
+            <span
+                style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:500; background-color:#F8D316; color:#1A1A2E; padding:4px 24px; display:inline-block;">Funding</span>
+        </div>
+
+        <!-- Main heading -->
+        <h1
+            style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:clamp(2.5rem,5vw,4.5rem); font-weight:500; line-height:1.08; color:#1A1A2E; letter-spacing:-0.02em; margin:0 0 24px 0;">
+            Fueling Your Startup's<br>Growth
+        </h1>
+
+        <!-- Subtext -->
+        <p
+            style="font-family:'Inter',sans-serif; font-size:clamp(1rem,1.5vw,1.2rem); color:#555555; line-height:1.7; margin:0;">
+            Connecting startups with the right capital, at the right time. From angel investors to government grants —
+            we open the doors.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES / OFFERINGS -->
+<div class="page-section" style="padding-top:80px;padding-bottom:80px;background:#f8fafc;">
+    <div class="split-layout" style="gap:40px;">
+
+        <!-- Investor Connect -->
+        <div
+            style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:40px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.05); height:100%; box-sizing:border-box;">
+            <h2
+                style="font-family:'Playfair Display',Georgia,serif; font-size:2rem; color:#1A1A2E; margin-bottom:20px; border-bottom:3px solid #2563EB; display:inline-block; padding-bottom:8px;">
+                Investor Connect</h2>
+            <p style="font-family:'Inter',sans-serif; font-size:1.1rem; color:#475569; line-height:1.7;">
+                We facilitate investor connections for startups, linking them with potential investors and venture
+                capitalists to secure funding and accelerate their growth trajectory.
+            </p>
+        </div>
+
+        <!-- Funding Facilitation -->
+        <div
+            style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:40px; box-shadow:0 10px 25px -5px rgba(0,0,0,0.05); height:100%; box-sizing:border-box;">
+            <h2
+                style="font-family:'Playfair Display',Georgia,serif; font-size:2rem; color:#1A1A2E; margin-bottom:20px; border-bottom:3px solid #F8D316; display:inline-block; padding-bottom:8px;">
+                Funding Facilitation</h2>
+            <p style="font-family:'Inter',sans-serif; font-size:1.1rem; color:#475569; line-height:1.7;">
+                In terms of government grants, MSME hackathons, and other funding schemes, we assist startups in
+                identifying, applying for, and securing these opportunities, providing guidance through the application
+                process.
+            </p>
+            <p style="font-family:'Inter',sans-serif; font-size:1.1rem; color:#475569; line-height:1.7; margin-top:24px;">
+                <strong>Ongoing Schemes:</strong> MSME HI/BI, Govt. of India
+            </p>
+        </div>
+
+    </div>
 </div>
 
-<!-- INVESTOR CONNECT -->
-<div class="page-section" style="padding-top:80px;padding-bottom:60px;">
-    <div class="section-label">INVESTOR CONNECT</div>
-    <div class="split-layout" style="align-items:center;">
-        <div>
-            <h2 class="page-heading">CONNECTING STARTUPS TO CAPITAL</h2>
-            <p class="mono-text" style="margin-top:20px;">We facilitate investor connections for startups, linking them with potential investors and venture capitalists to secure funding and accelerate their growth trajectory.</p>
-            <p class="mono-text" style="margin-top:14px;">Our strong network of funding partners and ecosystem partners are pivotal in enriching our incubator's network, fostering collaboration, and amplifying opportunities for mutual growth and innovation.</p>
+<!-- PARTNER LOGOS SECTION -->
+<div style="background-color:#f6f6f6; padding:48px clamp(20px,5vw,80px) 52px; position:relative; overflow:hidden;">
+
+    <!-- Subtle decorative lines background -->
+    <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:0.06;">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="diag-lines" width="40" height="40" patternUnits="userSpaceOnUse"
+                    patternTransform="rotate(-30)">
+                    <line x1="0" y1="0" x2="0" y2="40" stroke="#000000" stroke-width="0.8" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diag-lines)" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <div style="text-align:center; position:relative; z-index:2; margin-bottom:28px;">
+        <h2
+            style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:#e53e3e; margin:0 0 10px 0; letter-spacing:-0.01em;">
+            We Are Partnered With
+        </h2>
+        <!-- Decorative squiggle line -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:2px;margin-bottom:16px;">
+            <?php for ($i = 0; $i < 12; $i++): ?>
+                <div style="width:5px;height:2px;background:#e53e3e;border-radius:2px;"></div>
+            <?php endfor; ?>
         </div>
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tbi-infra-screenshot-5.png"
-                 alt="Investor Connect" style="width:100%;height:360px;object-fit:cover;display:block;">
-            <span class="img-label">Investor Connect at RCOEM TBI</span>
+    </div>
+
+    <!-- Logo Grid -->
+    <div style="position:relative;z-index:2;width:100%;max-width:100%;">
+        <div style="display:flex;justify-content:center;align-items:center;gap:clamp(20px,4vw,60px);flex-wrap:wrap;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/faad.png" alt="FAAD"
+                style="height:55px;width:auto;object-fit:contain;filter:brightness(0);opacity:1;">
+
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/earlyseed.png"
+                alt="Earlyseed Ventures"
+                style="height:65px;width:auto;object-fit:contain;filter:brightness(0);opacity:1;">
+
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/thinkuvate.png" alt="Thinkuvate"
+                style="height:50px;width:auto;object-fit:contain;filter:brightness(0);opacity:1;">
         </div>
     </div>
 </div>
 
-<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
+<!-- PITCH / CONTACT CTA -->
+<div class="page-section" style="padding-top:100px;padding-bottom:100px; text-align:center;">
+    <div style="max-width:800px; margin:0 auto;">
+        <h2
+            style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(2rem,4vw,3rem); color:#1A1A2E; margin-bottom:24px;">
+            Want to pitch your startup for funding or want to submit a proposal to funding agencies?</h2>
 
-<!-- FUNDING FACILITATION -->
-<div class="page-section" style="padding-top:60px;padding-bottom:60px;">
-    <div class="section-label">FUNDING FACILITATION</div>
-    <div class="split-layout" style="align-items:center;">
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tbi-funding-facilitation.png"
-                 alt="Funding Facilitation" style="width:100%;height:340px;object-fit:cover;display:block;">
-            <span class="img-label">MSME HI/BI Scheme — Govt. of India</span>
-        </div>
-        <div>
-            <h2 class="page-heading">GRANT & SCHEME SUPPORT</h2>
-            <p class="mono-text" style="margin-top:20px;">In terms of government grants, MSME hackathons, and other funding schemes, we assist startups in identifying, applying for, and securing these opportunities — providing guidance through the entire application process.</p>
-            <div style="margin-top:30px; padding:24px; border-left:3px solid #0057B0; background:#f8fafc; border:1px solid #e2e8f0; border-left-width:3px; border-radius:12px;">
-                <p style="font-family:var(--mono);font-size:0.8rem;color:#0057B0;font-weight:700;margin-bottom:6px;letter-spacing:0.1em;text-transform:uppercase;">ONGOING SCHEME</p>
-                <p style="font-family:var(--mono);font-size:0.9rem;color:#0f172a;font-weight:700;">MSME HI/BI Scheme — Government of India</p>
+        <p style="font-family:'Inter',sans-serif; font-size:1.1rem; color:#475569; margin-bottom:40px;">
+            Reach out to the RCOEM TECHNOLOGY BUSINESS INCUBATORS FOUNDATION to get started.
+        </p>
+
+        <a href="mailto:rcoemtbi@rknec.edu"
+            style="display:inline-block; background-color:#2563EB; color:#ffffff; font-family:'Inter',sans-serif; font-weight:600; padding:16px 32px; border-radius:30px; text-decoration:none; font-size:1.1rem; transition:background-color 0.2s, transform 0.2s; margin-bottom:32px;"
+            onmouseover="this.style.backgroundColor='#1d4ed8'; this.style.transform='translateY(-2px)';"
+            onmouseout="this.style.backgroundColor='#2563EB'; this.style.transform='translateY(0)';">
+            Contact Us
+        </a>
+
+        <div
+            style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap; font-family:'Inter',sans-serif; font-size:1rem; color:#64748b;">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                </svg>
+                <span>9960722491 | 9890100429</span>
             </div>
-        </div>
-    </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
-
-<!-- SOFT RESOURCES -->
-<div class="page-section" style="padding-top:60px;padding-bottom:60px;">
-    <div class="section-label">SOFT RESOURCES</div>
-    <div class="split-layout" style="align-items:center;">
-        <div>
-            <h2 class="page-heading">SOFTWARE &amp; SUBSCRIPTIONS</h2>
-            <p class="mono-text" style="margin-top:20px;">Software and subscriptions help startups reduce operational costs, enabling access to essential tools for development, and creating a more efficient workflow. They also facilitate rapid prototyping, market testing, and scalability without significant upfront investments.</p>
-        </div>
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tbi-infra-screenshot-6.png"
-                 alt="Soft Resources" style="width:100%;height:300px;object-fit:cover;display:block;">
-        </div>
-    </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #e0e0e0;margin:0 7%;">
-
-<!-- CONTACT CTA -->
-<div class="page-section" style="padding-top:60px;padding-bottom:80px;">
-    <div class="section-label">GET IN TOUCH</div>
-    <div class="split-layout">
-        <h2 class="page-heading">READY TO PITCH FOR FUNDING?</h2>
-        <div>
-            <ul class="bullet-list" style="margin-bottom:30px;">
-                <li>+91 9960722491 / 9890100429</li>
-                <li>rcoemtbi@rknec.edu</li>
-                <li>Ramdeo Tekdi, Katol Road, Nagpur 440013</li>
-            </ul>
-            <a href="mailto:rcoemtbi@rknec.edu"
-               style="display:inline-block;background:#0057B0;color:#fff;padding:14px 32px;font-family:var(--mono);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:700;">
-                CONTACT US →
-            </a>
+            <div style="display:flex; align-items:center; gap:8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>rcoemtbi@rknec.edu</span>
+            </div>
         </div>
     </div>
 </div>

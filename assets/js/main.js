@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             touchMultiplier: 2,
             infinite: false,
         });
+        window.lenis = lenis;
 
         // Integrate Lenis with GSAP ticker (no ScrollTrigger needed)
         if (typeof gsap !== 'undefined') {
@@ -228,4 +229,109 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
+
+    // ─── 4. Stat Counter Animation ────────────────────────────────────────────
+    function initStatCounters() {
+        const counterElements = document.querySelectorAll('.stat-cell-number, .stat-light-number, [data-counter]');
+        if (!counterElements.length) return;
+
+        // Group counters by section/grid container so each section triggers when scrolled into view
+        const sections = new Set();
+        counterElements.forEach(el => {
+            const section = el.closest('.stats-metrics-section, .stats-light-section, .stats-hairline-grid, .stats-light-grid') || el.parentElement;
+            if (section) sections.add(section);
+        });
+
+        // Parse counter item metadata
+        function parseCounter(el) {
+            const rawText = el.textContent.trim();
+            const match = rawText.match(/^([^\d]*)([\d,.]+)([\s\S]*)$/);
+            const prefix = el.dataset.prefix !== undefined ? el.dataset.prefix : (match ? match[1] : '');
+            const rawNum = match ? match[2].replace(/,/g, '') : '0';
+            const target = parseFloat(el.dataset.target !== undefined ? el.dataset.target : rawNum);
+            const suffix = el.dataset.suffix !== undefined ? el.dataset.suffix : (match ? match[3] : '');
+            const decimals = parseInt(
+                el.dataset.decimals || (rawNum.includes('.') ? rawNum.split('.')[1].length : '0'),
+                10
+            );
+
+            return {
+                el,
+                prefix,
+                target: isNaN(target) ? 0 : target,
+                suffix,
+                decimals,
+                originalText: rawText
+            };
+        }
+
+        // Smooth cubic ease-out
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function animateSectionCounters(section) {
+            const items = section.querySelectorAll('.stat-cell-number, .stat-light-number, [data-counter]');
+            items.forEach((el, idx) => {
+                const data = parseCounter(el);
+                const { prefix, target, suffix, decimals } = data;
+
+                // Duration tailored to the magnitude: 1300ms - 1900ms
+                const duration = Math.min(1900, Math.max(1300, 1300 + (target > 50 ? 400 : 0)));
+                const staggerDelay = idx * 80;
+
+                // Set to 0 immediately when section enters viewport
+                el.textContent = `${prefix}${decimals > 0 ? (0).toFixed(decimals) : '0'}${suffix}`;
+
+                setTimeout(() => {
+                    let startTime = null;
+
+                    function step(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const elapsed = timestamp - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easedProgress = easeOutCubic(progress);
+                        const currentVal = target * easedProgress;
+
+                        const formattedVal = decimals > 0
+                            ? currentVal.toFixed(decimals)
+                            : Math.round(currentVal).toString();
+
+                        el.textContent = `${prefix}${formattedVal}${suffix}`;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            // Ensure final value is exact
+                            const finalVal = decimals > 0 ? target.toFixed(decimals) : target;
+                            el.textContent = `${prefix}${finalVal}${suffix}`;
+                        }
+                    }
+
+                    requestAnimationFrame(step);
+                }, staggerDelay);
+            });
+        }
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        obs.unobserve(entry.target);
+                        animateSectionCounters(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.18,
+                rootMargin: '0px 0px -30px 0px'
+            });
+
+            sections.forEach(sec => observer.observe(sec));
+        } else {
+            // Fallback for browsers without IntersectionObserver
+            sections.forEach(sec => animateSectionCounters(sec));
+        }
+    }
+
+    initStatCounters();
 });

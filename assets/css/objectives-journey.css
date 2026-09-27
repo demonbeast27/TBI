@@ -6,7 +6,7 @@
 /* ── Section wrapper ─────────────────────────────────────────── */
 .obj-journey-section {
   background: #f8f8f6;
-  padding: 100px 0 80px;
+  padding: 65px 0 50px;
   overflow: hidden;
   position: relative;
 }
@@ -15,7 +15,7 @@
 .obj-journey-header {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 60px;
+  margin: 0 auto 36px;
   padding: 0 24px;
 }
 .obj-journey-eyebrow {
@@ -100,7 +100,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
   width: 46%;
   opacity: 0;
   transform: translateY(24px) translateY(-50%);
@@ -125,8 +125,8 @@
 
 /* ── Node circle ─────────────────────────────────────────────── */
 .obj-node-circle {
-  width: 110px;
-  height: 110px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   flex-shrink: 0;
   background: #e9f0fb;
@@ -134,7 +134,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   position: relative;
   transition: background 0.5s ease, border-color 0.5s ease,
               box-shadow 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1);
@@ -153,7 +152,7 @@
 }
 
 .obj-node-num {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
   line-height: 1;
   color: #0057B0;
@@ -166,84 +165,91 @@
   color: #ffffff;
 }
 
-/* Node icon */
+/* Node icon (removed) */
 .obj-node-icon {
-  width: 22px;
-  height: 22px;
-  color: #0057B0;
-  margin-bottom: 2px;
-  transition: color 0.4s ease;
-}
-.obj-node-circle.is-active .obj-node-icon,
-.obj-node-circle.is-past .obj-node-icon {
-  color: rgba(255,255,255,0.85);
+  display: none;
 }
 
-/* ── Step text block ─────────────────────────────────────────── */
+/* ── Step text block (Redesigned Card Structure) ─────────────── */
 .obj-step-text {
   flex: 1;
   min-width: 0;
-  
-  /* Add background and padding to protect text from path overlap */
-  background: rgba(248, 248, 246, 0.85); /* match section bg #f8f8f6 */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 20px 24px;
-  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 20px;
+  padding: 16px 24px 20px;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.05), 0 4px 10px -2px rgba(15, 23, 42, 0.02);
   position: relative;
   z-index: 2; /* keep above the path */
-  border: 1px solid rgba(0, 87, 176, 0.05);
-}
-.obj-step-eyebrow {
-  display: block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #0057B0;
-  margin-bottom: 4px;
-  opacity: 0.75;
-}
-.obj-step-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #0d1117;
-  margin: 0 0 6px;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-.obj-step-desc {
-  font-size: 0.875rem;
-  color: #475569;
-  line-height: 1.65;
-  margin: 0 0 10px;
-}
-.obj-step-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.obj-step--right .obj-step-tags {
-  justify-content: flex-start;
-}
-.obj-step--left .obj-step-tags {
-  justify-content: flex-end;
-}
-.obj-step-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #0057B0;
-  background: rgba(0,87,176,0.08);
-  border: 1px solid rgba(0,87,176,0.18);
-  border-radius: 9999px;
-  padding: 3px 10px;
+  text-align: left;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
 }
 
-/* ── Active step text highlight ──────────────────────────────── */
-.obj-step.is-active .obj-step-title {
+/* Subtle top gradient accent on card hover / active */
+.obj-step-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: transparent;
+  transition: background 0.35s ease;
+}
+
+.obj-step-text:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -6px rgba(0, 87, 176, 0.12), 0 6px 16px -3px rgba(15, 23, 42, 0.04);
+  border-color: rgba(0, 87, 176, 0.22);
+}
+
+.obj-step-text:hover::before {
+  background: linear-gradient(90deg, #0057B0, #3b82f6);
+}
+
+.obj-step.is-active .obj-step-text {
+  border-color: rgba(0, 87, 176, 0.28);
+  box-shadow: 0 16px 36px -6px rgba(0, 87, 176, 0.12), 0 6px 14px -2px rgba(15, 23, 42, 0.04);
+}
+
+.obj-step.is-active .obj-step-text::before {
+  background: linear-gradient(90deg, #0057B0, #3b82f6);
+}
+
+.obj-step-title {
+  font-family: inherit;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  transition: color 0.3s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.obj-step.is-active .obj-step-title,
+.obj-step-text:hover .obj-step-title {
   color: #0057B0;
+}
+
+.obj-step-desc {
+  font-size: 0.9375rem;
+  color: #475569;
+  line-height: 1.68;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Legacy selectors kept harmless for backward compatibility */
+.obj-step-eyebrow,
+.obj-step-tags,
+.obj-step-tag {
+  display: none;
 }
 
 /* ── Mobile (single column) ──────────────────────────────────── */
@@ -277,24 +283,24 @@
     transform: translateX(0);
   }
   .obj-journey-body.is-mobile .obj-step-text {
-    background: transparent;
-    border: none;
-    padding: 0;
-  }
-  .obj-journey-body.is-mobile .obj-step-tags {
-    justify-content: flex-start !important;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    text-align: left !important;
   }
   .obj-node-circle {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
-  .obj-node-num { font-size: 1.1rem; }
+  .obj-node-num { font-size: 1.3rem; }
   .obj-step-title { font-size: 1.05rem; }
 }
 
 @media (max-width: 480px) {
-  .obj-node-circle { width: 64px; height: 64px; }
-  .obj-node-num { font-size: 0.95rem; }
+  .obj-node-circle { width: 58px; height: 58px; }
+  .obj-node-num { font-size: 1.1rem; }
   .obj-step-title { font-size: 0.975rem; }
   .obj-step-desc { font-size: 0.8rem; }
 }

@@ -13,6 +13,12 @@ get_header();
      ══════════════════════════════════════════════════════════════════════════ -->
 <section class="hero-light-section" aria-label="Hero landing section">
 
+    <!-- Infinite scrolling grid background, with a cursor-following reveal -->
+    <div class="hero-infinite-grid" aria-hidden="true">
+        <div class="hero-grid-layer hero-grid-layer--base"></div>
+        <div class="hero-grid-layer hero-grid-layer--reveal"></div>
+    </div>
+
     <!-- 3D Isometric Cube Circular Dome on Left -->
     <div class="hero-dome-wrapper" aria-hidden="true">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/isometric-cubes-dome.svg" alt="" class="hero-dome-img">
@@ -27,10 +33,23 @@ get_header();
             <!-- Main Headline — clean single-block, no word-splitting -->
             <div class="hero-headline-wrap">
                 <h1 class="hero-light-headline">
-                    We create and incubate<br>
-                    companies that are<br>
-                    <span class="word-sustainable">sustainable</span>
+                    We create, incubate,<br>
+                    and <span class="word-sustainable">accelerate.</span>
                 </h1>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hero-light-ctas">
+                <a href="https://forms.gle/hzaZ7GbYGFqg2V3fA" target="_blank" rel="noopener" class="btn-hero-primary" id="hero-apply-btn">
+                    Apply for Incubation
+                    <svg class="hero-btn-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="<?php echo esc_url(home_url('/services/')); ?>" class="btn-hero-secondary" id="hero-explore-btn">
+                    Explore Services
+                </a>
             </div>
         </div><!-- /.hero-left-content -->
 
@@ -40,62 +59,121 @@ get_header();
             <div class="hero-slider-fade hero-slider-fade-top" aria-hidden="true"></div>
 
             <div class="hero-slider-container" aria-label="Incubated startups slider">
-                <!-- Column 1: Scrolling Upwards -->
+
+                <!-- Column 1: Scrolling Upwards (11 startups) -->
                 <div class="hero-slider-col hero-slider-col-1">
                     <div class="hero-slider-track hero-slider-track-up">
                         <!-- Group 1 -->
                         <div class="hero-slider-group">
+                            <!-- 1. Happico India (Rocca) -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Michel</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/ROCCA.png" alt="Happico India (Rocca)" class="hero-card-logo">
                             </div>
+
+<!-- 3. Sigmatronics Innovations -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Ilark</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SIGMATRONICS.png" alt="Sigmatronics Innovations" class="hero-card-logo">
                             </div>
+
+<!-- 5. Empowrclub -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Same Ad</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EMPOWRCLUB.png" alt="Empowrclub" class="hero-card-logo">
+                            </div>
+                            <!-- 6. Shashtav Charging Bharat -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">Shashtav<br>Charging Bharat</span>
+                            </div>
+                            <!-- 7. Health COCO / Smiling Bird -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SMILEBIRD.png" alt="Health COCO / Smiling Bird" class="hero-card-logo">
+                            </div>
+                            <!-- 8. Easywire Technology -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EASYWIRE.png" alt="Easywire Technology" class="hero-card-logo">
+                            </div>
+                            <!-- 9. MechHelp -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/MECHHELP.png" alt="MechHelp" class="hero-card-logo">
+                            </div>
+                            <!-- 10. Prograssia (Sharun Innovations) -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PROGRESSIA.png" alt="Prograssia" class="hero-card-logo">
+                            </div>
+                            <!-- 11. HAWLT Technology -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/HAWLA.png" alt="HAWLT Technology" class="hero-card-logo">
                             </div>
                         </div>
                         <!-- Group 2 (Duplicate for seamless loop) -->
                         <div class="hero-slider-group" aria-hidden="true">
-                            <div class="hero-card">
-                                <span class="hero-card-name">Michel</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">Ilark</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">Same Ad</span>
-                            </div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/ROCCA.png" alt="Happico India (Rocca)" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SIGMATRONICS.png" alt="Sigmatronics Innovations" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EMPOWRCLUB.png" alt="Empowrclub" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">Shashtav<br>Charging Bharat</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/SMILEBIRD.png" alt="Health COCO / Smiling Bird" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/EASYWIRE.png" alt="Easywire Technology" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/MECHHELP.png" alt="MechHelp" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PROGRESSIA.png" alt="Prograssia" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/HAWLA.png" alt="HAWLT Technology" class="hero-card-logo"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Scrolling Downwards (Reverse) -->
+                <!-- Column 2: Scrolling Downwards (Reverse) — 11 startups -->
                 <div class="hero-slider-col hero-slider-col-2">
                     <div class="hero-slider-track hero-slider-track-down">
                         <!-- Group 1 -->
                         <div class="hero-slider-group">
+                            <!-- 12. Bio-Spectronics -->
                             <div class="hero-card">
-                                <span class="hero-card-name">Michel<br>Woofers</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BIOSPECTRONICS.png" alt="Bio-Spectronics" class="hero-card-logo">
                             </div>
+                            <!-- 13. Parkby -->
                             <div class="hero-card">
-                                <span class="hero-card-name">R1Fer</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/tbi-photos/parkby.png" alt="Parkby" class="hero-card-logo">
                             </div>
+                            <!-- 14. Rihla Technologies (Yoo CAB) -->
                             <div class="hero-card">
-                                <span class="hero-card-name hero-card-options">and these<br>type of options</span>
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/YOO CABS.png" alt="Rihla Technologies (Yoo CAB)" class="hero-card-logo">
+                            </div>
+                            <!-- 15. DVSLA Technologies -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">DVSLA<br>Technologies</span>
+                            </div>
+                            <!-- 16. Wooferzz Innovations -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/WOOFERZZ.png" alt="Wooferzz Innovations" class="hero-card-logo">
+                            </div>
+
+<!-- 18. BeRAM -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BERAM.png" alt="BeRAM" class="hero-card-logo">
+                            </div>
+                            <!-- 19. Wise-Besarv -->
+                            <div class="hero-card">
+                                <span class="hero-card-name">Wise-Besarv</span>
+                            </div>
+                            <!-- 20. Pbridge Consultancy -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PBRIDGE.png" alt="Pbridge Consultancy" class="hero-card-logo">
+                            </div>
+
+<!-- 22. Cupda Project -->
+                            <div class="hero-card">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/Cupda Project.png" alt="Cupda Project" class="hero-card-logo">
                             </div>
                         </div>
                         <!-- Group 2 (Duplicate for seamless loop) -->
                         <div class="hero-slider-group" aria-hidden="true">
-                            <div class="hero-card">
-                                <span class="hero-card-name">Michel<br>Woofers</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name">R1Fer</span>
-                            </div>
-                            <div class="hero-card">
-                                <span class="hero-card-name hero-card-options">and these<br>type of options</span>
-                            </div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BIOSPECTRONICS.png" alt="Bio-Spectronics" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/tbi-photos/parkby.png" alt="Parkby" class="hero-card-logo"></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/YOO CABS.png" alt="Rihla Technologies (Yoo CAB)" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">DVSLA<br>Technologies</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/WOOFERZZ.png" alt="Wooferzz Innovations" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/BERAM.png" alt="BeRAM" class="hero-card-logo"></div>
+                            <div class="hero-card"><span class="hero-card-name">Wise-Besarv</span></div>
+                            <div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/PBRIDGE.png" alt="Pbridge Consultancy" class="hero-card-logo"></div>
+<div class="hero-card"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Logos/Cupda Project.png" alt="Cupda Project" class="hero-card-logo"></div>
                         </div>
                     </div>
                 </div>
@@ -127,37 +205,37 @@ get_header();
 
                 <!-- Stat 1 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">95+</span>
+                    <span class="stat-cell-number" data-target="95" data-suffix="+">95+</span>
                     <span class="stat-cell-label">Startup Ideas<br>Curated</span>
                 </div>
 
                 <!-- Stat 2 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">30+</span>
+                    <span class="stat-cell-number" data-target="30" data-suffix="+">30+</span>
                     <span class="stat-cell-label">Registered<br>Companies</span>
                 </div>
 
                 <!-- Stat 3 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">17</span>
+                    <span class="stat-cell-number" data-target="17">17</span>
                     <span class="stat-cell-label">Funded<br>Startups</span>
                 </div>
 
                 <!-- Stat 4 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">74+L</span>
+                    <span class="stat-cell-number" data-target="74" data-suffix="+L">74+L</span>
                     <span class="stat-cell-label">Funding by<br>RBU</span>
                 </div>
 
                 <!-- Stat 5 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">17</span>
+                    <span class="stat-cell-number" data-target="17">17</span>
                     <span class="stat-cell-label">Revenue<br>Generating</span>
                 </div>
 
                 <!-- Stat 6 -->
                 <div class="stat-cell">
-                    <span class="stat-cell-number">3Cr</span>
+                    <span class="stat-cell-number" data-target="3" data-suffix="Cr">3Cr</span>
                     <span class="stat-cell-label">External Fund<br>Raised</span>
                 </div>
 
@@ -174,7 +252,6 @@ get_header();
 
     <!-- Section Header -->
     <div class="obj-journey-header">
-        <span class="obj-journey-eyebrow">What We Do</span>
         <h2 class="obj-journey-title">Our Objectives</h2>
         <p class="obj-journey-sub">How RCOEM TBI drives innovation, growth, and impact across the startup ecosystem.</p>
     </div>
@@ -185,102 +262,55 @@ get_header();
         <!-- Step 01: Eco-System (LEFT) -->
         <div class="obj-step obj-step--left" data-step="0">
             <div class="obj-node-circle" data-step="0">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 <span class="obj-node-num">01</span>
             </div>
             <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
                 <h3 class="obj-step-title">Eco-System</h3>
                 <p class="obj-step-desc">Nurturing innovation and Startups in the region for sustainable economic growth.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Innovation</span>
-                    <span class="obj-step-tag">Growth</span>
-                </div>
             </div>
         </div>
 
         <!-- Step 02: Venture Creation (RIGHT) -->
         <div class="obj-step obj-step--right" data-step="1">
             <div class="obj-node-circle" data-step="1">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-5 0V4.5A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 8A2.5 2.5 0 0 1 17 10.5V18a2.5 2.5 0 0 1-5 0v-7.5A2.5 2.5 0 0 1 14.5 8z"/><path d="M4.5 14A2.5 2.5 0 0 1 7 16.5V19a2.5 2.5 0 0 1-5 0v-2.5A2.5 2.5 0 0 1 4.5 14z"/></svg>
                 <span class="obj-node-num">02</span>
             </div>
             <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
                 <h3 class="obj-step-title">Venture Creation</h3>
                 <p class="obj-step-desc">Inculcate entrepreneurship and new venture creation based on innovative technology.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Startups</span>
-                    <span class="obj-step-tag">Innovation</span>
-                </div>
             </div>
         </div>
 
         <!-- Step 03: Tech Commercialization (LEFT) -->
         <div class="obj-step obj-step--left" data-step="2">
             <div class="obj-node-circle" data-step="2">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
                 <span class="obj-node-num">03</span>
             </div>
             <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
                 <h3 class="obj-step-title">Tech Commercialization</h3>
                 <p class="obj-step-desc">Platform for speedy commercialization of technologies from the host institution.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Commercialization</span>
-                    <span class="obj-step-tag">IPR</span>
-                </div>
             </div>
         </div>
 
-        <!-- Step 04: Interfacing (RIGHT) -->
+        <!-- Step 04: Networking (RIGHT) -->
         <div class="obj-step obj-step--right" data-step="3">
             <div class="obj-node-circle" data-step="3">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                 <span class="obj-node-num">04</span>
             </div>
             <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
-                <h3 class="obj-step-title">Interfacing</h3>
-                <p class="obj-step-desc">Interfacing between academia, industry, and financial institutions.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Industry</span>
-                    <span class="obj-step-tag">Academia</span>
-                </div>
+                <h3 class="obj-step-title">Networking</h3>
+                <p class="obj-step-desc">Networking between academia, industry and financial institution.</p>
             </div>
         </div>
 
-        <!-- Step 05: Networking (LEFT) -->
+        <!-- Step 05: Value Addition (LEFT) -->
         <div class="obj-step obj-step--left" data-step="4">
             <div class="obj-node-circle" data-step="4">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><line x1="12" y1="8" x2="5" y2="16"/><line x1="12" y1="8" x2="19" y2="16"/></svg>
                 <span class="obj-node-num">05</span>
             </div>
             <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
-                <h3 class="obj-step-title">Networking</h3>
-                <p class="obj-step-desc">Networking between academia, industry and financial institution.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Connect</span>
-                    <span class="obj-step-tag">Collaborate</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Step 06: Value Addition (RIGHT) -->
-        <div class="obj-step obj-step--right" data-step="5">
-            <div class="obj-node-circle" data-step="5">
-                <svg class="obj-node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <span class="obj-node-num">06</span>
-            </div>
-            <div class="obj-step-text">
-                <span class="obj-step-eyebrow">Objective</span>
                 <h3 class="obj-step-title">Value Addition</h3>
                 <p class="obj-step-desc">Value added services: legal, financial, technical, IPR, and more.</p>
-                <div class="obj-step-tags">
-                    <span class="obj-step-tag">Services</span>
-                    <span class="obj-step-tag">Support</span>
-                </div>
             </div>
         </div>
 
@@ -292,32 +322,25 @@ get_header();
 <!-- ══════════════════════════════════════════════════════════════════════════
      FINAL CTA BANNER
      ══════════════════════════════════════════════════════════════════════════ -->
-<section style="padding:80px 0;background:var(--lt-bg,#F7F7F5);position:relative;z-index:10;overflow:hidden;">
-    <div style="max-width:1200px;margin:0 auto;padding:0 48px;">
-        <div class="cloudflare-cta-banner" style="border-radius:2rem;padding:72px 56px;text-align:center;position:relative;">
+<section class="cta-banner-section" aria-label="Ready to launch">
+    <div class="cta-banner-wrap">
+        <div class="cloudflare-cta-banner">
 
             <div class="cf-dot-grid" aria-hidden="true"></div>
             <div class="cf-bottom-glow" aria-hidden="true"></div>
 
-            <div class="cf-floating-badge cf-float-1" style="top:14%;left:5%;" aria-hidden="true"><div class="cf-diamond-inner"><i class="fas fa-server"></i></div></div>
-            <div class="cf-floating-badge cf-float-2" style="top:55%;left:3%;" aria-hidden="true"><div class="cf-diamond-inner"><i class="fas fa-sliders-h"></i></div></div>
-            <div class="cf-floating-badge cf-float-1" style="top:14%;right:5%;" aria-hidden="true"><div class="cf-diamond-inner"><i class="fas fa-layer-group"></i></div></div>
-            <div class="cf-floating-badge cf-float-3" style="top:55%;right:3%;" aria-hidden="true"><div class="cf-diamond-inner"><i class="fas fa-cube"></i></div></div>
-
-            <div style="position:relative;z-index:10;max-width:640px;margin:0 auto;">
-                <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,3.2vw,3rem);font-weight:800;color:#1A1A2E;margin-bottom:18px;line-height:1.15;letter-spacing:-0.02em;">
+            <div class="cta-banner-content">
+                <h2 class="cta-banner-title">
                     Ready to Launch Your Startup?
                 </h2>
-                <p style="font-family:'Inter',sans-serif;font-size:1rem;color:rgba(255,255,255,0.90);line-height:1.7;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto;">
+                <p class="cta-banner-text">
                     Join RCOEM TBI and get access to co-working spaces, expert mentors, funding connections, and a thriving startup community.
                 </p>
-                <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-                    <a href="https://forms.gle/hzaZ7GbYGFqg2V3fA" target="_blank" rel="noopener" id="cta-apply-btn"
-                       style="padding:13px 34px;background:#fff;color:#1A1A2E;border-radius:9999px;font-weight:700;font-size:0.9rem;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.15);font-family:'Inter',sans-serif;transition:all 0.25s ease;">
+                <div class="cta-banner-actions">
+                    <a href="https://forms.gle/hzaZ7GbYGFqg2V3fA" target="_blank" rel="noopener" id="cta-apply-btn" class="cta-btn cta-btn--primary">
                         Apply for Incubation Now
                     </a>
-                    <a href="<?php echo esc_url(home_url('/services/')); ?>" id="cta-services-btn"
-                       style="padding:13px 28px;background:rgba(255,255,255,0.20);color:#fff;border-radius:9999px;font-weight:600;font-size:0.9rem;text-decoration:none;border:1px solid rgba(255,255,255,0.30);font-family:'Inter',sans-serif;transition:all 0.25s ease;">
+                    <a href="<?php echo esc_url(home_url('/services/')); ?>" id="cta-services-btn" class="cta-btn cta-btn--ghost">
                         Explore Services
                     </a>
                 </div>

@@ -8,17 +8,32 @@ get_header();
 ?>
 
 <!-- Editorial Page Header -->
-<div class="page-editorial-header">
-    <div class="peh-label">CONTACT US</div>
-    <h1 class="peh-heading">
-        LET'S <span class="ph-red">BUILD</span> SOMETHING<br>
-        <span class="ph-red">GREAT</span> TOGETHER
-    </h1>
-    <p class="peh-desc">
-        Have a question, idea, or just want to connect?<br>
-        <strong>We'd love to hear from you.</strong>
-    </p>
-</div>
+<section
+    style="background:#FFFFFF; padding: clamp(100px,10vw,130px) clamp(20px,5vw,64px) clamp(60px,7vw,100px); text-align:center; position:relative;">
+        <?php tbi_hero_grid(); ?>
+        <div class="tbi-hero-content" style="max-width:900px; margin:0 auto;">
+
+        <!-- Yellow "Contact" label pill -->
+        <div style="margin-bottom:24px;">
+            <span
+                style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:500; background-color:#F8D316; color:#1A1A2E; padding:4px 24px; display:inline-block;">Contact</span>
+        </div>
+
+        <!-- Main heading — same font as home page -->
+        <h1
+            style="font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:clamp(3rem,6vw,5.5rem); font-weight:500; line-height:1.08; color:#1A1A2E; letter-spacing:-0.02em; margin:0 0 24px 0;">
+            Let's Build Something<br>Great Together
+        </h1>
+
+        <!-- Subtext -->
+        <p
+            style="font-family:'Inter',sans-serif; font-size:clamp(1rem,1.5vw,1.2rem); color:#555555; line-height:1.7; margin:0;">
+            Have a question, idea, or just want to connect?
+        </p>
+
+    </div>
+</section>
+
 
 <!-- CONTACT SPLIT -->
 <div class="page-section" style="padding-top:80px;padding-bottom:80px;">
@@ -31,57 +46,87 @@ get_header();
 
             <div style="display:flex;flex-direction:column;gap:0;">
 
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
-                    <div style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <div
+                    style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
+                    <div
+                        style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <i class="fas fa-map-marker-alt" style="color:#fff;font-size:0.9rem;"></i>
                     </div>
                     <div>
-                        <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">LOCATION</p>
-                        <p class="mono-text" style="max-width:none;">Shri Ramdeobaba College of Engineering and Management,<br>RCOEM-TATA-CIIIT, Katol Road,<br>Near Ramdeobaba Temple, Gittikhatan,<br>Nagpur, Maharashtra 440013, India</p>
+                        <p
+                            style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">
+                            LOCATION</p>
+                        <p class="mono-text" style="max-width:none;">Shri Ramdeobaba College of Engineering and
+                            Management,<br>RCOEM-TATA-CIIIT, Katol Road,<br>Near Ramdeobaba Temple,
+                            Gittikhatan,<br>Nagpur, Maharashtra 440013, India</p>
                     </div>
                 </div>
 
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
-                    <div style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <div
+                    style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
+                    <div
+                        style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <i class="fas fa-phone-alt" style="color:#fff;font-size:0.9rem;"></i>
                     </div>
                     <div>
-                        <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">PHONE</p>
+                        <p
+                            style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">
+                            PHONE</p>
                         <p class="mono-text" style="max-width:none;">+91 9960722491<br>+91 9890100429</p>
                     </div>
                 </div>
 
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
-                    <div style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <div
+                    style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
+                    <div
+                        style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <i class="fas fa-envelope" style="color:#fff;font-size:0.9rem;"></i>
                     </div>
                     <div>
-                        <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">EMAIL</p>
+                        <p
+                            style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">
+                            EMAIL</p>
                         <p class="mono-text" style="max-width:none;">rcoemtbi@rknec.edu</p>
                     </div>
                 </div>
 
-                <div style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
-                    <div style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <div
+                    style="display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e0e0e0;">
+                    <div
+                        style="width:40px;height:40px;background:#0057B0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <i class="fas fa-clock" style="color:#fff;font-size:0.9rem;"></i>
                     </div>
                     <div>
-                        <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">OFFICE HOURS</p>
-                        <p class="mono-text" style="max-width:none;">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday: Closed</p>
+                        <p
+                            style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#0057B0;font-weight:700;margin-bottom:8px;">
+                            OFFICE HOURS</p>
+                        <p class="mono-text" style="max-width:none;">Monday – Friday: 9:00 AM – 6:00 PM<br>Saturday:
+                            9:00 AM – 1:00 PM<br>Sunday: Closed</p>
                     </div>
                 </div>
 
                 <!-- Social -->
                 <div style="padding:28px 0;">
-                    <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#94a3b8;font-weight:700;margin-bottom:16px;">FOLLOW US</p>
+                    <p
+                        style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#94a3b8;font-weight:700;margin-bottom:16px;">
+                        FOLLOW US</p>
                     <div style="display:flex;gap:12px;">
-                        <a href="#" style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;" onmouseover="this.style.background='#0057B0';this.style.color='#fff'" onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
+                        <a href="https://www.instagram.com/tbi_rcoem/" target="_blank"
+                            style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;"
+                            onmouseover="this.style.background='#0057B0';this.style.color='#fff'"
+                            onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;" onmouseover="this.style.background='#0057B0';this.style.color='#fff'" onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
+                        <a href="https://www.linkedin.com/company/rcoem-tbi-foundation/" target="_blank"
+                            style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;"
+                            onmouseover="this.style.background='#0057B0';this.style.color='#fff'"
+                            onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;" onmouseover="this.style.background='#0057B0';this.style.color='#fff'" onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
+                        <a href="#"
+                            style="width:40px;height:40px;background:#f1f5f9;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#0f172a;border-radius:10px;transition:all 0.2s;"
+                            onmouseover="this.style.background='#0057B0';this.style.color='#fff'"
+                            onmouseout="this.style.background='#f1f5f9';this.style.color='#0f172a'">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>

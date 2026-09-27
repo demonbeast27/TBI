@@ -7,17 +7,40 @@
 get_header();
 ?>
 
+<style>
+    .reports-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    @media (max-width: 1000px) {
+        .reports-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .reports-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
 <!-- Editorial Page Header -->
 <div class="page-editorial-header">
-    <div class="peh-label">PROGRAMS</div>
-    <h1 class="peh-heading">
-        LAUNCHPAD FOR YOUR <span class="ph-red">BIG</span><br>
-        <span class="ph-red">IDEAS</span> &amp; BOLD VENTURES
-    </h1>
-    <p class="peh-desc">
-        Structured programs designed to take your startup from concept to scale.<br>
-        <strong>Every program is built for traction, not just theory.</strong>
-    </p>
+    <?php tbi_hero_grid(); ?>
+    <div class="peh-inner">
+        <div class="peh-label">Programs</div>
+        <h1 class="peh-heading">
+            Launchpad for your <span class="ph-red">big ideas</span>
+            &amp; bold ventures
+        </h1>
+        <p class="peh-desc">
+            Structured programs designed to take your startup from concept to scale.<br>
+            <strong>Every program is built for traction, not just theory.</strong>
+        </p>
+    </div>
 </div>
 
 <!-- INTRO -->
@@ -36,11 +59,11 @@ get_header();
     <div class="section-label">ANNUAL REPORTS</div>
     <h2 class="page-heading" style="margin-bottom:40px;">IMPACT BY THE NUMBERS</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+    <div class="reports-grid">
         <div class="accent-card">
             <div class="card-label">2025 – 26</div>
             <p style="margin-bottom:24px;">Annual Report documenting all programs, startups incubated, and milestones achieved.</p>
-            <a href="https://rbunagpur.in/wp-content/uploads/2026/05/Annual-Report-2025-26.pdf" target="_blank"
+            <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/Annual-Report-2025-26.pdf' ); ?>" target="_blank"
                style="display:inline-block;background:#0057B0;color:#fff;padding:10px 22px;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:700;">
                 DOWNLOAD PDF →
             </a>
@@ -48,7 +71,7 @@ get_header();
         <div class="accent-card">
             <div class="card-label">2024 – 25</div>
             <p style="margin-bottom:24px;">Comprehensive overview of incubated startups, programs run, and ecosystem partnerships.</p>
-            <a href="https://rbunagpur.in/wp-content/uploads/2025/07/Annual-Report-2024-25.pdf" target="_blank"
+            <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/Annual-Report-2024-25.pdf' ); ?>" target="_blank"
                style="display:inline-block;background:#0057B0;color:#fff;padding:10px 22px;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:700;">
                 DOWNLOAD PDF →
             </a>
@@ -56,7 +79,7 @@ get_header();
         <div class="accent-card">
             <div class="card-label">2023 – 24</div>
             <p style="margin-bottom:24px;">Year-in-review covering funding facilitation, mentoring sessions, and startup growth metrics.</p>
-            <a href="https://rbunagpur.in/wp-content/uploads/2025/10/Report-23-24.pdf" target="_blank"
+            <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/Report-2023-24.pdf' ); ?>" target="_blank"
                style="display:inline-block;background:#0057B0;color:#fff;padding:10px 22px;font-family:var(--mono);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;font-weight:700;">
                 DOWNLOAD PDF →
             </a>

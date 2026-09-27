@@ -161,7 +161,7 @@ Install these plugins for better functionality:
 3. Click `Save Changes`
 
 This will make your URLs look like:
-- `yourdomain.com/about-us/`
+- `yourdomain.com/about/`
 - `yourdomain.com/contact/`
 
 ---
@@ -172,11 +172,11 @@ This will make your URLs look like:
 
 When creating pages, WordPress will automatically create URL slugs. Make sure they match these:
 - Home → `home` (won't show in URL as it's the front page)
-- About Us → `about-us`
+- About → `about`
 - E-Cell → `e-cell`
 - Contact → `contact`
 - Services → `services`
-- Incubated Startups → `incubated-startups`
+- Startups → `startups`
 
 ### Image Paths
 

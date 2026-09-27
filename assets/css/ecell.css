@@ -6,7 +6,7 @@
     gap: 20px;
     padding: 30px 10%;
     /* Matched side padding with tbi-section */
-    min-height: 550px;
+    min-height: 250px;
     background: #ffffff;
 }
 
@@ -83,21 +83,16 @@
 /* ================= CORE COMMITTEE ================= */
 .masonry {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 per row */
-    gap: 24px;
-    padding: 40px 10%;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 per row */
+    gap: 28px;
+    padding: 40px 8%;
 }
 
-/* SHOW ONLY 8 MEMBERS */
-.masonry .card:nth-child(n+9) {
-    display: none;
-}
 
 /* CARD STYLE */
 .card {
-    height: 400px;
-    /* Adjusted height to fit better */
+    height: 460px;
     border-radius: 24px;
     overflow: hidden;
     background: #000;
@@ -183,6 +178,11 @@
     .right-section,
     .left-section {
         height: 420px;
+    }
+
+    /* Layout is stacked here, so the mirrored duplicate video is redundant */
+    .right-section--dupe {
+        display: none;
     }
 
     .masonry {

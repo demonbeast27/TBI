@@ -50,86 +50,29 @@
     </header>
 
     <!-- StaggeredMenu (ported from React Bits) -->
-    <div class="staggered-menu-wrapper fixed-wrapper" id="staggeredMenu" data-position="right" style="--sm-accent: #5227FF;">
+    <div class="staggered-menu-wrapper fixed-wrapper" id="staggeredMenu" data-position="right" data-lenis-prevent style="--sm-accent: #5227FF;">
         <div class="sm-prelayers" aria-hidden="true">
             <div class="sm-prelayer" style="background: #B497CF"></div>
             <div class="sm-prelayer" style="background: #5227FF"></div>
         </div>
 
-        <aside id="staggered-menu-panel" class="staggered-menu-panel" aria-hidden="true">
+        <aside id="staggered-menu-panel" class="staggered-menu-panel" aria-hidden="true" data-lenis-prevent>
             <div class="sm-panel-inner">
                 <ul class="sm-panel-list" role="list" data-numbering>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Go to home page" data-index="1">
-                            <span class="sm-panel-itemLabel">Home</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/about/')); ?>" aria-label="Learn about us" data-index="2">
-                            <span class="sm-panel-itemLabel">About</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/services/')); ?>" aria-label="View our services" data-index="3">
-                            <span class="sm-panel-itemLabel">Services</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/mentors/')); ?>" aria-label="Meet our mentors" data-index="4">
-                            <span class="sm-panel-itemLabel">Mentors</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/programs/')); ?>" aria-label="Explore programs" data-index="5">
-                            <span class="sm-panel-itemLabel">Programs</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/funding/')); ?>" aria-label="Funding opportunities" data-index="6">
-                            <span class="sm-panel-itemLabel">Funding</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/startups/')); ?>" aria-label="Our startups" data-index="7">
-                            <span class="sm-panel-itemLabel">Startups</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/co-founder/')); ?>" aria-label="Co-Founder matching" data-index="8">
-                            <span class="sm-panel-itemLabel">Co-Founder</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/careers/')); ?>" aria-label="Careers" data-index="9">
-                            <span class="sm-panel-itemLabel">Careers</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/e-cell/')); ?>" aria-label="E-Cell" data-index="10">
-                            <span class="sm-panel-itemLabel">E-Cell</span>
-                        </a>
-                    </li>
-                    <li class="sm-panel-itemWrap">
-                        <a class="sm-panel-item" href="<?php echo esc_url(home_url('/contact/')); ?>" aria-label="Get in touch" data-index="12">
-                            <span class="sm-panel-itemLabel">Contact</span>
-                        </a>
-                    </li>
+                    <?php
+                    $tbi_nav_items = tbi_primary_nav_items();
+                    foreach ( $tbi_nav_items as $tbi_i => $tbi_item ) :
+                        ?>
+                        <li class="sm-panel-itemWrap">
+                            <a class="sm-panel-item<?php echo tbi_is_nav_current( $tbi_item['slug'] ) ? ' is-current' : ''; ?>"
+                               href="<?php echo esc_url( tbi_primary_nav_url( $tbi_item['slug'] ) ); ?>"
+                               aria-label="<?php echo esc_attr( $tbi_item['aria'] ); ?>"
+                               data-index="<?php echo esc_attr( $tbi_i + 1 ); ?>">
+                                <span class="sm-panel-itemLabel"><?php echo esc_html( $tbi_item['label'] ); ?></span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
-
-                <div class="sm-socials" aria-label="Social links">
-                    <h3 class="sm-socials-title">Socials</h3>
-                    <ul class="sm-socials-list" role="list">
-                        <li class="sm-socials-item">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="sm-socials-link">Twitter</a>
-                        </li>
-                        <li class="sm-socials-item">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="sm-socials-link">GitHub</a>
-                        </li>
-                        <li class="sm-socials-item">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="sm-socials-link">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </aside>
     </div>

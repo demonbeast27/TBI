@@ -8,38 +8,29 @@
             <div class="footer-sub">Technology Business Incubator</div>
             <div class="footer-tagline">Dream Big, Deliver Bigger</div>
 
-            <h4 style="margin-top: 20px;">Newsletter Subscribe</h4>
-            <div class="newsletter-box">
-                <input type="email" placeholder="Enter your email">
-                <button><i class="fas fa-paper-plane"></i></button>
-            </div>
+            <h4 style="margin-top: 20px;">Mail Us</h4>
+            <a class="footer-mail-link" href="mailto:rcoemtbi@rknec.edu">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>rcoemtbi@rknec.edu</span>
+            </a>
         </div>
 
-        <!-- Col 2 -->
-        <div class="footer-col" style="flex: 1 1 150px; padding-left: 20px;">
+        <!-- Col 2: Quick Links (mirrors the "More" menu panel) -->
+        <div class="footer-col footer-col-links">
             <h4>Quick Links</h4>
-            <ul class="footer-links">
-                <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-                <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>">About</a></li>
-                <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact</a></li>
-                <li><a href="<?php echo esc_url(home_url('/e-cell/')); ?>">E-Cell</a></li>
-                <li><a href="<?php echo esc_url(home_url('/services/')); ?>">Infrastructure</a></li>
+            <ul class="footer-links footer-links-split">
+                <?php foreach ( tbi_primary_nav_items() as $tbi_item ) : ?>
+                    <li>
+                        <a href="<?php echo esc_url( tbi_primary_nav_url( $tbi_item['slug'] ) ); ?>"
+                           <?php echo tbi_is_nav_current( $tbi_item['slug'] ) ? ' aria-current="page"' : ''; ?>>
+                            <?php echo esc_html( $tbi_item['label'] ); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
 
         <!-- Col 3 -->
-        <div class="footer-col" style="flex: 1 1 150px;">
-            <h4>Resources</h4>
-            <ul class="footer-links">
-                <li><a href="#">Funding</a></li>
-                <li><a href="#">Mentor</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-
-        <!-- Col 4 -->
         <div class="footer-col" style="flex: 1 1 200px;">
             <h4>Contact</h4>
             <ul class="contact-list">
@@ -49,11 +40,11 @@
                 </li>
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <span>rcoemtbi@rknec.edu</span>
+                    <a class="footer-contact-link" href="mailto:rcoemtbi@rknec.edu">rcoemtbi@rknec.edu</a>
                 </li>
                 <li>
                     <i class="fas fa-phone-alt"></i>
-                    <span>9168067277</span>
+                    <a class="footer-contact-link" href="tel:+919168067277">9168067277</a>
                 </li>
             </ul>
         </div>

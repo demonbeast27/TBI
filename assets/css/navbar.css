@@ -24,52 +24,66 @@
     right: 0;
     width: 100%;
     z-index: 1000;
-    padding: 16px clamp(16px, 3.5vw, 32px) 0 clamp(16px, 3.5vw, 32px);
+    padding: 0;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     pointer-events: none;
-    transition: padding 400ms var(--nav-ease);
+    transition: padding 350ms var(--nav-ease);
     box-sizing: border-box;
+}
+
+body.admin-bar .navbar-wrapper {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .navbar-wrapper {
+        top: 46px;
+    }
 }
 
 /* --- Floating Rounded Container --- */
 .navbar-container {
     pointer-events: auto;
     width: 100%;
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 24px;
-    border-radius: 16px; /* rounded-2xl */
-    background: rgba(255, 255, 255, 0.90);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(229, 231, 235, 0.85);
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
-    transition: max-width 450ms var(--nav-ease),
-                background 450ms var(--nav-ease),
-                border 450ms var(--nav-ease),
-                box-shadow 450ms var(--nav-ease),
-                padding 450ms var(--nav-ease),
-                backdrop-filter 450ms var(--nav-ease);
+    padding: 14px clamp(20px, 4vw, 48px);
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: none;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: max-width 350ms var(--nav-ease),
+                border-radius 350ms var(--nav-ease),
+                background 350ms var(--nav-ease),
+                border 350ms var(--nav-ease),
+                box-shadow 350ms var(--nav-ease),
+                padding 350ms var(--nav-ease),
+                backdrop-filter 350ms var(--nav-ease);
     box-sizing: border-box;
 }
 
 /* --- Scrolled Floating State --- */
 .navbar-wrapper.is-scrolled {
-    padding-top: 10px;
+    padding: 12px clamp(16px, 3.5vw, 32px) 0 clamp(16px, 3.5vw, 32px);
 }
 
 .navbar-wrapper.is-scrolled .navbar-container {
+    max-width: 1280px;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-color: rgba(229, 231, 235, 1);
+    border: 1px solid rgba(229, 231, 235, 1);
     box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
     padding: 8px 24px;
 }

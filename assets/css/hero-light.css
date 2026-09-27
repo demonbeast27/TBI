@@ -9,12 +9,12 @@
    - Global site-wide light theme conversion
    ========================================================================== */
 
-/* ── Google Fonts ────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* ── Self-hosted Google Fonts ─────────────────────────────────────────────── */
+@import url('../fonts/google-fonts.css');
 
 /* ── Global Theme Tokens ─────────────────────────────────────────────────── */
 :root {
-    --lt-bg:           #FAFAF8;
+    --lt-bg:           #FFFFFF;
     --lt-white:        #FFFFFF;
     --lt-navy:         #1A1A2E;
     --lt-navy-soft:    #2d2d4e;
@@ -57,7 +57,7 @@ body {
     right: 0 !important;
     width: 100% !important;
     z-index: 1000 !important;
-    padding: 16px clamp(16px, 3.5vw, 32px) 0 clamp(16px, 3.5vw, 32px) !important;
+    padding: 0 !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -65,35 +65,54 @@ body {
     -webkit-backdrop-filter: none !important;
     pointer-events: none !important;
     box-sizing: border-box !important;
-    transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+body.admin-bar .navbar-wrapper {
+    top: 32px !important;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .navbar-wrapper {
+        top: 46px !important;
+    }
 }
 
 .navbar-container {
     pointer-events: auto !important;
     width: 100% !important;
-    max-width: 1280px !important; /* max-w-7xl */
+    max-width: 100% !important;
     margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 10px 24px !important; /* px-6 py-3 */
-    background: rgba(255, 255, 255, 0.90) !important; /* bg-white/90 */
-    border: 1px solid rgba(229, 231, 235, 0.85) !important; /* border border-gray-100 */
-    border-radius: 16px !important; /* rounded-2xl */
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04) !important; /* shadow-md */
-    backdrop-filter: blur(12px) saturate(180%) !important; /* subtle backdrop-blur-sm/md */
-    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    padding: 14px clamp(20px, 4vw, 48px) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    transition: max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border-radius 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                border 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-sizing: border-box !important;
 }
 
 .navbar-wrapper.is-scrolled {
-    padding-top: 10px !important;
+    padding: 12px clamp(16px, 3.5vw, 32px) 0 clamp(16px, 3.5vw, 32px) !important;
 }
 
 .navbar-wrapper.is-scrolled .navbar-container {
+    max-width: 1280px !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(229, 231, 235, 1) !important;
+    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05) !important;
     background: rgba(255, 255, 255, 0.96) !important;
-    box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.05) !important; /* shadow-lg */
-    border-color: rgba(229, 231, 235, 1) !important;
     padding: 8px 24px !important;
 }
 
@@ -287,6 +306,76 @@ body {
     box-sizing: border-box;
 }
 
+/* ── Infinite Grid Background ───────────────────────────────────────────────
+    Two stacked layers of the same dot field, scrolled by transform so the
+    loop is seamless (one tile = one animation step). The top layer is masked
+    by a soft circle whose centre is driven by --grid-x / --grid-y from
+    hero-grid.js, creating the cursor-following reveal.                       */
+.hero-infinite-grid {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    --grid-x: 50%;
+    --grid-y: 50%;
+}
+
+.hero-grid-layer {
+    position: absolute;
+    /* bleed one tile so the scroll loop never shows a hard edge */
+    inset: -16px;
+    /* 16px tile / 1px dot, matching the dot-pattern spec. Alpha lives here in
+       the dot colour so the layer opacity is reserved for the reveal fade. */
+    --dot: rgba(26, 26, 46, 0.15);
+    background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    animation: hero-grid-scroll 3s linear infinite;
+    will-change: transform;
+}
+
+.hero-grid-layer--base {
+    opacity: 1;
+}
+
+.hero-grid-layer--reveal {
+    --dot: rgba(26, 26, 46, 0.34);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    -webkit-mask-image: radial-gradient(300px circle at var(--grid-x) var(--grid-y), #000 0%, rgba(0, 0, 0, 0.5) 45%, transparent 72%);
+    mask-image: radial-gradient(300px circle at var(--grid-x) var(--grid-y), #000 0%, rgba(0, 0, 0, 0.5) 45%, transparent 72%);
+}
+
+.hero-infinite-grid.is-active .hero-grid-layer--reveal {
+    opacity: 1;
+}
+
+/* Translating by exactly one tile loops seamlessly, and unlike animating
+   background-position this is GPU-composited (no repaint per frame). */
+@keyframes hero-grid-scroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-16px, -16px, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-grid-layer {
+        animation: none;
+    }
+}
+
+/* No cursor to follow on touch devices — skip the reveal layer entirely */
+@media (hover: none), (pointer: coarse) {
+    .hero-grid-layer--reveal {
+        display: none;
+    }
+}
+
 /* ── Left / Editorial Content ────────────────────────────────────────────── */
 .hero-left-content {
     display: flex;
@@ -296,11 +385,12 @@ body {
     max-width: 680px;
     position: relative;
     z-index: 5;
+    margin-top: -60px;
 }
 
 /* Main Headline */
 .hero-headline-wrap {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .hero-light-headline {
@@ -321,13 +411,87 @@ body {
     font-family: 'Playfair Display', Georgia, serif !important;
     font-style: italic;
     font-weight: 600;
-    color: var(--lt-navy);
-    background-color: var(--lt-yellow);
+    color: #1A1A2E;
+    background-color: #F8D316;
     padding: 2px 8px 4px;
     letter-spacing: -0.01em;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     margin-top: 4px;
+}
+
+/* ── Hero CTA Buttons (Directly below headline) ──────────────────────────── */
+.hero-light-ctas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: clamp(28px, 3.8vw, 44px);
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--lt-navy);
+    color: #FFFFFF !important;
+    padding: 14px 30px;
+    border-radius: 9999px;
+    font-family: var(--lt-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    letter-spacing: -0.01em;
+    box-shadow: 0 4px 16px rgba(26, 26, 46, 0.15);
+    transition: all 0.25s var(--lt-ease);
+    border: 1.5px solid var(--lt-navy);
+    cursor: pointer;
+}
+
+.btn-hero-primary:hover {
+    background-color: #0d0d1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 26, 46, 0.25);
+    color: #FFFFFF !important;
+}
+
+.btn-hero-primary svg,
+.btn-hero-primary i {
+    transition: transform 0.25s ease;
+}
+
+.btn-hero-primary:hover svg,
+.btn-hero-primary:hover i {
+    transform: translateX(3px);
+}
+
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--lt-navy) !important;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    font-family: var(--lt-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    letter-spacing: -0.01em;
+    border: 1.5px solid rgba(26, 26, 46, 0.22);
+    transition: all 0.25s var(--lt-ease);
+    cursor: pointer;
+}
+
+.btn-hero-secondary:hover {
+    background-color: rgba(26, 26, 46, 0.05);
+    border-color: var(--lt-navy);
+    transform: translateY(-2px);
+    color: var(--lt-navy) !important;
 }
 
 /* ── "OUR ADVANTAGE" Block ───────────────────────────────────────────────── */
@@ -406,12 +570,12 @@ body {
 
 .hero-slider-fade-top {
     top: 0;
-    background: linear-gradient(to bottom, #F7F7F5 10%, rgba(247, 247, 245, 0) 100%);
+    background: linear-gradient(to bottom, #FFFFFF 10%, rgba(255, 255, 255, 0) 100%);
 }
 
 .hero-slider-fade-bottom {
     bottom: 0;
-    background: linear-gradient(to top, #F7F7F5 10%, rgba(247, 247, 245, 0) 100%);
+    background: linear-gradient(to top, #FFFFFF 10%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* Slider Container */
@@ -528,11 +692,30 @@ body {
     line-height: 1.35;
 }
 
+/* Logo image inside hero cards */
+.hero-card-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 18px;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 6px;
+    /* Subtle filter for consistent look across different logo backgrounds */
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.06));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-card:hover .hero-card-logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+}
+
 /* ════════════════════════════════════════════════════════════════════════════
    STATS / METRICS SECTION — Light Theme 2-Column with 2×3 Hairline Grid
    ════════════════════════════════════════════════════════════════════════════ */
 .stats-metrics-section {
-    background-color: #F7F7F5;
+    background-color: #FFFFFF;
     padding: clamp(80px, 9vw, 130px) 0;
     width: 100%;
     position: relative;
@@ -614,6 +797,7 @@ body {
     letter-spacing: -0.035em; /* tight tracking */
     margin-bottom: 12px;
     display: block;
+    font-variant-numeric: tabular-nums;
 }
 
 /* Small two-line muted label */
@@ -1212,7 +1396,7 @@ select:focus {
    ABOUT US HERO SECTION — Refined Serif Editorial Layout
    ════════════════════════════════════════════════════════════════════════════ */
 .about-hero-section {
-    background-color: #F7F7F5;
+    background-color: #FFFFFF;
     padding-top: clamp(84px, 7.5vw, 104px);
     padding-bottom: clamp(64px, 8vw, 96px);
     padding-left: clamp(20px, 4vw, 32px);

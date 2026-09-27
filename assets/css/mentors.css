@@ -1,0 +1,689 @@
+/* =========================================================
+   RCOEM TBI FOUNDATION - MENTORS DIRECTORY STYLES
+   ========================================================= */
+
+/* --- Mentors Directory Container --- */
+.mentors-directory-section {
+    padding: 60px 7% 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Controls Bar: Search & Category Filter --- */
+.mentors-controls-wrap {
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mentors-search-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mentors-search-box {
+    position: relative;
+    flex: 1;
+    max-width: 480px;
+    min-width: 280px;
+}
+
+.mentors-search-box i.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.mentors-search-input {
+    width: 100%;
+    padding: 14px 44px 14px 46px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #0f172a;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    transition: all 0.25s ease;
+}
+
+.mentors-search-input:focus {
+    border-color: #0057b0;
+    box-shadow: 0 0 0 4px rgba(0, 87, 176, 0.12);
+}
+
+.mentors-search-clear {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e2e8f0;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mentors-search-clear.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mentors-search-clear:hover {
+    background: #cbd5e1;
+    color: #0f172a;
+}
+
+.mentors-stats-counter {
+    font-family: var(--mono, monospace);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.mentors-stats-counter strong {
+    color: #0057b0;
+    font-weight: 700;
+}
+
+/* Filter Pills */
+.mentors-filter-pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mentor-filter-btn {
+    appearance: none;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+.mentor-filter-btn:hover {
+    border-color: #cbd5e1;
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.mentor-filter-btn.active {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+}
+
+.mentor-filter-btn .filter-count {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: inherit;
+    font-weight: 600;
+}
+
+.mentor-filter-btn.active .filter-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* --- Horizontal Scroll Track & Grid Options --- */
+.mentors-scroll-header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.mentors-scroll-hint {
+    font-family: var(--mono, monospace);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mentors-scroll-hint i {
+    color: #0057b0;
+}
+
+.mentors-header-right-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mentors-view-toggle-btns {
+    display: inline-flex;
+    background: #f1f5f9;
+    border-radius: 9999px;
+    padding: 3px;
+    border: 1px solid #e2e8f0;
+}
+
+.view-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.view-toggle-btn.active {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.mentors-scroll-nav-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.mentor-nav-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.mentor-nav-arrow:hover:not(:disabled) {
+    background: #0057b0;
+    color: #ffffff;
+    border-color: #0057b0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 87, 176, 0.25);
+}
+
+.mentor-nav-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Horizontal Scroll Container (Default) */
+.mentors-scroll-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 10px 4px 28px 4px;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.mentors-scroll-track.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.mentors-scroll-track::-webkit-scrollbar {
+    height: 9px;
+}
+
+.mentors-scroll-track::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 9999px;
+    margin: 0 10px;
+}
+
+.mentors-scroll-track::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+    border: 2px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+.mentors-scroll-track::-webkit-scrollbar-thumb:hover {
+    background: #0057b0;
+}
+
+/* Card in Horizontal Scroll Track */
+.mentors-scroll-track .mentor-card {
+    flex: 0 0 360px;
+    width: 360px;
+    min-width: 340px;
+    scroll-snap-align: start;
+}
+
+/* Grid Layout Mode */
+.mentors-scroll-track.view-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    cursor: default;
+    padding: 10px 0;
+}
+
+.mentors-scroll-track.view-mode-grid .mentor-card {
+    flex: initial;
+    width: auto;
+    min-width: 0;
+}
+
+/* --- Mentor Card Base --- */
+.mentor-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.09);
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mentor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0057b0, #60a5fa);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(15, 23, 42, 0.04);
+    border-color: rgba(0, 87, 176, 0.3);
+}
+
+.mentor-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Header: Avatar & Domain Tag */
+.mentor-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.mentor-avatar-wrap {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #0057b0 0%, #38bdf8 100%);
+    box-shadow: 0 4px 12px rgba(0, 87, 176, 0.18);
+}
+
+.mentor-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f1f5f9;
+    border: 2px solid #ffffff;
+    display: block;
+}
+
+.mentor-header-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.mentor-name {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.mentor-designation {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0057b0;
+    line-height: 1.35;
+    margin-bottom: 4px;
+}
+
+.mentor-company-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mentor-company-badge i {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+/* Card Body */
+.mentor-card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Card Footer */
+.mentor-card-footer {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.mentor-area-label {
+    font-family: var(--mono, monospace);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* Category Badges */
+.mentor-domain-pill {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 11px;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+/* Domain Colors */
+.pill-technology {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.pill-finance {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.pill-product-development {
+    background: #fdf4ff;
+    color: #a21caf;
+    border: 1px solid #f5d0fe;
+}
+
+.pill-ideation {
+    background: #fffbeb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.pill-strategy {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.pill-marketing {
+    background: #fff1f2;
+    color: #be123c;
+    border: 1px solid #fecdd3;
+}
+
+.pill-legal {
+    background: #faf5ff;
+    color: #6b21a8;
+    border: 1px solid #e9d5ff;
+}
+
+.pill-operations {
+    background: #f8fafc;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+/* --- Empty / No Mentors State --- */
+.mentors-empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    display: none;
+}
+
+.mentors-empty-state i {
+    font-size: 2.5rem;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+.mentors-empty-state h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.mentors-empty-state p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+}
+
+.mentors-reset-btn {
+    appearance: none;
+    background: #0057b0;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mentors-reset-btn:hover {
+    background: #004494;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1180px) {
+    .mentors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mentors-directory-section {
+        padding: 40px 5% 70px;
+    }
+
+    .mentors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mentors-search-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mentors-search-box {
+        max-width: 100%;
+    }
+
+    .mentors-filter-pills {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mentor-filter-btn {
+        flex-shrink: 0;
+    }
+
+    .mentor-card {
+        padding: 24px 20px;
+    }
+
+    .mentor-avatar-wrap {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mentor-name {
+        font-size: 1.1rem;
+    }
+}
+
+/* =========================================================
+   MENTORING PROCESS – FLOWING INFOGRAPHIC DIAGRAM
+   ========================================================= */
+.mentoring-process-section {
+    padding: 80px 7% 90px;
+    background: #f8fafc;
+    border-top: 1px solid #e8edf5;
+}
+
+.mentoring-process-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.mentoring-process-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #08183A;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Diagram wrapper: white card, scrollable on small screens */
+.mp-diagram-wrap {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 32px 28px 20px;
+    box-shadow: 0 2px 20px rgba(8, 24, 58, 0.05);
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mp-diagram-wrap::-webkit-scrollbar {
+    height: 5px;
+}
+
+.mp-diagram-wrap::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+/* The SVG itself */
+.mp-svg {
+    display: block;
+    width: 100%;
+    min-width: 760px;       /* keeps readability on small screens */
+    height: auto;
+}
+
+/* Mobile: reduce outer padding so the card fits */
+@media (max-width: 768px) {
+    .mentoring-process-section {
+        padding: 60px 4% 70px;
+    }
+
+    .mentoring-process-title {
+        font-size: 1.5rem;
+    }
+
+    .mp-diagram-wrap {
+        padding: 20px 16px 16px;
+    }
+}
+
